@@ -1,0 +1,27 @@
+%h1 Listing contactos
+
+%table
+  %tr
+    %th Nombre
+    %th Apellido
+    %th Email
+    %th Telefono
+    %th Comentario
+    %th
+    %th
+    %th
+
+  - @contactos.each do |contacto|
+    %tr
+      %td= contacto.nombre
+      %td= contacto.apellido
+      %td= contacto.email
+      %td= contacto.telefono
+      %td= contacto.comentario
+      %td= link_to 'Show', contacto
+      %td= link_to 'Edit', edit_contacto_path(contacto)
+      %td= link_to 'Destroy', contacto, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Contacto', new_contacto_path

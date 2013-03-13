@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Titulo:
+  = @foto.titulo
+%p
+  %b Publico:
+  = @foto.publico
+%p
+  %b Album:
+  = @foto.album_id
+%p
+  %b Categoria:
+  = @foto.categoria_id
+
+= link_to 'Edit', edit_foto_path(@foto)
+\|
+= link_to 'Back', fotos_path

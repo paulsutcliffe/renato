@@ -1,0 +1,25 @@
+%h1 Listing fotos
+
+%table
+  %tr
+    %th Titulo
+    %th Publico
+    %th Album
+    %th Categoria
+    %th
+    %th
+    %th
+
+  - @fotos.each do |foto|
+    %tr
+      %td= foto.titulo
+      %td= foto.publico
+      %td= foto.album_id
+      %td= foto.categoria_id
+      %td= link_to 'Show', foto
+      %td= link_to 'Edit', edit_foto_path(foto)
+      %td= link_to 'Destroy', foto, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Foto', new_foto_path

@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Nombre:
+  = @contacto.nombre
+%p
+  %b Apellido:
+  = @contacto.apellido
+%p
+  %b Email:
+  = @contacto.email
+%p
+  %b Telefono:
+  = @contacto.telefono
+%p
+  %b Comentario:
+  = @contacto.comentario
+
+= link_to 'Edit', edit_contacto_path(@contacto)
+\|
+= link_to 'Back', contactos_path

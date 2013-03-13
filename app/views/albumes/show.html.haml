@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Nombre:
+  = @album.nombre
+%p
+  %b Fecha:
+  = @album.fecha
+%p
+  %b Cliente:
+  = @album.cliente_id
+
+= link_to 'Edit', edit_album_path(@album)
+\|
+= link_to 'Back', albumes_path
