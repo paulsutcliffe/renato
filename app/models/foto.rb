@@ -4,4 +4,5 @@ class Foto < ActiveRecord::Base
   friendly_id :titulo, :use => :slugged
 
   belongs_to :album
+  belongs_to :categoria
 end

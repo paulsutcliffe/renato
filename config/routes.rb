@@ -7,13 +7,16 @@ Renato::Application.routes.draw do
 
   resources :videos
 
-  resources :categorias
+  resources :categorias do
+    resources :fotos
+  end
 
-  resources :fotos
-
-  resources :albumes
-
-  devise_for :clientes
+  devise_for :clientes do
+    resources :albumes do
+      resources :fotos do      
+      end
+    end
+  end
 
   devise_for :admins
 
