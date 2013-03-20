@@ -12,5 +12,10 @@
   .field
     = f.label :publico
     = f.check_box :publico
+
+  .field
+    = f.label :categoria_id 
+    = f.collection_select :categoria_id, Categoria.all, :id, :nombre
+
   .actions
     = f.submit I18n.t('submit')

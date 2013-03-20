@@ -1,6 +1,7 @@
 class Cliente < ActiveRecord::Base
-
+  #devise has one relationship
   has_many :albumes
+  
 
   extend FriendlyId
   friendly_id :nombre, :use => :slugged
@@ -11,7 +12,7 @@ class Cliente < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :nombre, :apellido
 
 
 

@@ -9,6 +9,16 @@
   %br
   - @fotos.each do |foto|
     = foto.titulo
+    %br
+
+
+  %div
+    - if @album.cliente
+      = @album.cliente.nombre
+
+  %div
+    
+
 
 
 = link_to 'Edit', edit_album_path(@album)

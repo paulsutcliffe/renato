@@ -12,8 +12,11 @@
   .field
     = f.label :fecha
     = f.date_select :fecha
+
+
+
   .field
     = f.label :cliente_id 
-    = f.collection_select :cliente_id, Cliente.all, :id, :email
+    = f.collection_select :cliente_id, Cliente.all, :id, :nombre
   .actions
     = f.submit 'Save'

@@ -12,14 +12,11 @@ Renato::Application.routes.draw do
     resources :fotos
   end
 
- # devise_for :clientes do
     resources :albumes do
-      resources :fotos do      
-      end
+      resources :fotos
     end
- # end
 
+  devise_for :clientes, :path => "clientes", :path_names => { :sign_in => 'ingresar', :sign_out => 'salir', :password => 'secreto', :confirmation => 'verificacion', :unlock => 'desbloquear', :registration => 'registro', :sign_up => 'inscribirse' }
 
-
-  devise_for :admins, :path => "auth", :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :registration => 'register', :sign_up => 'cmon_let_me_in' }
+  devise_for :admins, :path => "admins", :path_names => { :sign_in => 'ingresar', :sign_out => 'salir', :password => 'secreto', :confirmation => 'verificacion', :unlock => 'desbloquear', :registration => 'registro', :sign_up => 'inscribirse' }
 end

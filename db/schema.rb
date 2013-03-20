@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(:version => 20130313013611) do
 
   create_table "categorias", :force => true do |t|
     t.string   "nombre"
+    t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
