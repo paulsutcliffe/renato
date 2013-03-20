@@ -4,7 +4,7 @@ set :user, "renato"
 set :domain, "r4-dallas.webserversystems.com"
 set :project, "renato"
 set :application, "renato"
-set :applicationdir, "/home/rails_apps/#{application}"  # The standard Dreamhost setup
+set :applicationdir, "/home/#{user}/rails_apps/#{application}"  # The standard Dreamhost setup
 set :repository,  "git@github.com:paulsutcliffe/renato.git"
 default_run_options[:pty] = true
 
