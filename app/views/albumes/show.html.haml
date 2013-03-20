@@ -1,14 +1,15 @@
+
+= link_to 'Subir foto', new_album_foto_path(@album, @foto)
 %p#notice= notice
 
 %p
   %b Nombre:
   = @album.nombre
-%p
-  %b Fecha:
-  = @album.fecha
-%p
-  %b Cliente:
-  = @album.cliente_id
+
+  %br
+  - @fotos.each do |foto|
+    = foto.titulo
+
 
 = link_to 'Edit', edit_album_path(@album)
 \|

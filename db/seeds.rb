@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+
+
+Cliente.delete_all
+Cliente.create(:nombre => 'pedro', :apellido => 'sinclaire', :email => 'pedro@test.com', :password => '1234567')
+Cliente.create(:nombre => 'pablo', :apellido => 'sinclaire', :email => 'pablo@test.com', :password => '1234567')
+
+Album.delete_all
+Album.create(:nombre => 'Fiesta N1')
+
+Album.create(:nombre => 'Sesión Fotos')
