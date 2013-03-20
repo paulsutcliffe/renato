@@ -18,4 +18,16 @@ end
 
 
 
+#fix for ruby 1.8.7
+
+module ::Renato
+  class Application
+    include Rake::DSL
+  end
+end
+
+module ::RakeFileUtils
+  extend Rake::FileUtilsExt
+end
+
 Renato::Application.load_tasks
