@@ -12,12 +12,12 @@ Renato::Application.routes.draw do
     resources :fotos
   end
 
-  devise_for :clientes do
+ # devise_for :clientes do
     resources :albumes do
       resources :fotos do      
       end
     end
-  end
+ # end
 
 
 

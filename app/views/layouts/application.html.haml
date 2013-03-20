@@ -1,0 +1,56 @@
+!!!
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie6">
+/[if IE 7] <html class="no-js lt-ie9 lt-ie8 ie7">
+/[if IE 8] <html class="no-js lt-ie9 ie8">
+/ [if gt IE 8]><!
+%html.no-js
+  / <![endif]
+  %head
+    %title test
+
+    = render 'layouts/metas'
+    = render 'layouts/head'
+
+
+  %body{:id => bodyid, :class => bodyclass}
+
+    - if notice
+      = javascript_tag do
+        var alerta_mensaje =  "#{notice}"
+
+    .container
+      %header.main.one-third.column.alpha{:role => 'banner'}
+        .inner
+          %h1#logo
+            %a{:href => '/'}
+              Renato Ghilardi
+              %b
+                Fotografía Profesional 
+          #menu-button
+            Menú
+          %nav#main-menu.row
+            = render 'layouts/menu'
+          = render 'shared/follow_social'
+          #contact-info
+            %p
+              = link_to 'Contactar', '/', :id => 'contact-us'
+              %span.phone
+                9986521463
+              %span.email
+                renato@ghilardi.com
+      %section.two-thirds.column.alpha{:role => 'main'}
+        .inner
+          = yield
+   
+
+
+    = # javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'
+    = javascript_include_tag '/javascripts/libs/modernizr-latest.js'
+    = javascript_include_tag '/javascripts/libs/hammerjs/jquery.hammer.js'
+    = javascript_include_tag '/javascripts/application.js'
+
+		 
+    = javascript_include_tag 'touch.js'
+
+    = javascript_include_tag 'libs/supersized/slideshow/js/jquery.easing.min.js', 'libs/supersized/slideshow/js/supersized.3.2.7.min.js', 'libs/supersized-init.js'
+

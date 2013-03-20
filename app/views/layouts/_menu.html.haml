@@ -1,0 +1,23 @@
+%ul
+  %li#btn-inicio
+    = link_to content_tag(:span, 'Inicio'), '/'
+  %li#btn-portafolio
+    = link_to content_tag(:span, 'Portafolio'), albumes_path 
+    %ul
+      %li#btn-matrimonio
+        = link_to content_tag(:span, 'Matrimonio'), '/'
+      %li#btn-ninos
+        = link_to content_tag(:span, 'Niños'), '/'
+      %li#btn-moda
+        = link_to content_tag(:span, 'Moda'), '/'
+
+  %li#btn-bio
+    = link_to content_tag(:span, 'Bio'), '/'
+
+  %li#btn-descarga
+    = link_to content_tag(:span, 'Descarga tus fotos'), '/'
+
+  %li#btn-videos
+    = link_to content_tag(:span, 'Videos'), '/'
+
+

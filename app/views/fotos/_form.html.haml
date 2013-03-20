@@ -1,13 +1,16 @@
--if @foto.errors.any?
-  #error_explanation
-    %h2= "#{pluralize(@foto.errors.count, "error")} prohibited this foto from being saved:"
-    %ul
-      - @foto.errors.full_messages.each do |msg|
-        %li= msg
-
-.field
-  = f.label :titulo
-  = f.text_field :titulo
-.field
-  = f.label :publico
-  = f.check_box :publico
+= form_for([@album, @foto]) do |f|
+  -if @foto.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@foto.errors.count, "error")} prohibited this foto from being saved:"
+      %ul
+        - @foto.errors.full_messages.each do |msg|
+          %li= msg
+  
+  .field
+    = f.label :titulo
+    = f.text_field :titulo
+  .field
+    = f.label :publico
+    = f.check_box :publico
+  .actions
+    = f.submit I18n.t('submit')
