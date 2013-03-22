@@ -1,17 +1,18 @@
-
-
-
-
-
-
 #content
   %h2.page-title
-    Retratos
+    = @album.nombre
 
+  - if current_cliente
+    %h3.user-title
+      = current_cliente.nombre
+  #inner-top
+    = link_to I18n.t('album.back'), albumes_path, :class => 'btn back'
+    
   
-  = link_to 'Subir foto', new_album_foto_path(@album)
+    .admin-crud.admin-head
+      = link_to 'Subir Foto', new_album_foto_path(@album), :class => 'btn create'
 
-  #carousel.content.gallery
+  #carousel1.content.gallery
     %ul
       - @fotos.each do |foto|
         %li
@@ -36,27 +37,3 @@
 
 
 
-
-
-
-%p
-  %b Nombre:
-  = @album.nombre
-
-  %br
-  
-    %br
-
-
-  %div
-    - if @album.cliente
-      = @album.cliente.nombre
-
-  %div
-    
-
-
-
-= link_to 'Edit', edit_album_path(@album)
-\|
-= link_to 'Back', albumes_path

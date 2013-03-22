@@ -15,6 +15,6 @@ class FotosController < InheritedResources::Base
 
 
   def create
-    create!{ albumes_path }
+    create!{ album_path(@album) }
   end
 end

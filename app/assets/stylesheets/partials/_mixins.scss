@@ -139,6 +139,10 @@
   margin-bottom: $space-vertical;
 }
 
+@mixin button_black {
+  background: $filter-black; padding: 5px 10px; color: white; font-size: 24px; color: white;
+}
+
 @mixin inline-block {
   display: inline-block;
   *display: inline;
