@@ -1,0 +1,17 @@
+%h1 Listing backgrounds
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @backgrounds.each do |background|
+    %tr
+      %td= link_to 'Show', background
+      %td= link_to 'Edit', edit_background_path(background)
+      %td= link_to 'Destroy', background, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Background', new_background_path

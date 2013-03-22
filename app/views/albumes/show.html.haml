@@ -1,14 +1,50 @@
 
-= link_to 'Subir foto', new_album_foto_path(@album)
-%p#notice= notice
+
+
+
+
+
+#content
+  %h2.page-title
+    Retratos
+
+  
+  = link_to 'Subir foto', new_album_foto_path(@album)
+
+  #carousel.content.gallery
+    %ul
+      - @fotos.each do |foto|
+        %li
+          = link_to image_tag(foto.foto_picture(:index)), foto.foto_picture(:show), :class => 'lightbox', :rel => 'gallery'
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 %p
   %b Nombre:
   = @album.nombre
 
   %br
-  - @fotos.each do |foto|
-    = foto.titulo
+  
     %br
 
 

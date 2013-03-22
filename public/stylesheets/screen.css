@@ -1,68 +1,783 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../../Users/paulsutcliffe/.gems/gems/compass-0.13.alpha.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+@import url(skeleton/base.css);
+@import url(skeleton/skeleton.css);
+@import "http://fonts.googleapis.com/css?family=Marvel:400,700,400italic,700italic";
+/* line 1, ../../app/assets/stylesheets/partials/_layout.scss */
+body {
+  font: normal normal 16px/145% "Marvel", sans-serif;
+}
+
+/* line 2, ../../app/assets/stylesheets/partials/_layout.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Marvel", sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+/* line 3, ../../app/assets/stylesheets/partials/_layout.scss */
+p {
+  color: white;
+}
+
+/* line 5, ../../app/assets/stylesheets/partials/_layout.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 6, ../../app/assets/stylesheets/partials/_layout.scss */
+img {
+  vertical-align: top;
+}
+
+/* line 8, ../../app/assets/stylesheets/partials/_layout.scss */
+.container {
   margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../Users/paulsutcliffe/.gems/gems/compass-0.13.alpha.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html {
-  line-height: 1;
+/* line 9, ../../app/assets/stylesheets/partials/_layout.scss */
+ul ul, ul ol, ol ol, ol ul {
+  margin: 0;
 }
 
-/* line 24, ../../../../../../Users/paulsutcliffe/.gems/gems/compass-0.13.alpha.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
+/* line 13, ../../app/assets/stylesheets/partials/_layout.scss */
+.inner {
+  margin: 0 10px;
+  padding: 15px 0;
 }
 
-/* line 26, ../../../../../../Users/paulsutcliffe/.gems/gems/compass-0.13.alpha.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+/* 
+---------------------------------
+Header
+--------------------------------- 
+*/
+/* line 21, ../../app/assets/stylesheets/partials/_layout.scss */
+.one-third.column {
+  background: url(../images/backgrounds/filter-black.png);
+  -moz-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+/* line 25, ../../app/assets/stylesheets/partials/_layout.scss */
+.one-third.column .inner {
+  margin: 0;
+  position: relative;
+  min-height: 520px;
+  *height: auto !important;
+  height: 520px;
 }
 
-/* line 28, ../../../../../../Users/paulsutcliffe/.gems/gems/compass-0.13.alpha.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
+/* line 31, ../../app/assets/stylesheets/partials/_layout.scss */
+h1#logo {
+  margin: 0 0 40px 30px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
 }
-
-/* line 30, ../../../../../../Users/paulsutcliffe/.gems/gems/compass-0.13.alpha.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
+/* line 34, ../../app/assets/stylesheets/partials/_layout.scss */
+h1#logo * {
+  line-height: 100%;
 }
-/* line 103, ../../../../../../Users/paulsutcliffe/.gems/gems/compass-0.13.alpha.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
+/* line 37, ../../app/assets/stylesheets/partials/_layout.scss */
+h1#logo a {
+  color: white;
+  font-size: 1em;
 }
-
-/* line 32, ../../../../../../Users/paulsutcliffe/.gems/gems/compass-0.13.alpha.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
-}
-
-/* line 116, ../../../../../../Users/paulsutcliffe/.gems/gems/compass-0.13.alpha.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+/* line 40, ../../app/assets/stylesheets/partials/_layout.scss */
+h1#logo a b {
   display: block;
+  font-size: 0.68em;
+}
+
+/* line 47, ../../app/assets/stylesheets/partials/_layout.scss */
+#menu-button {
+  display: none;
+  color: white;
+  text-transform: uppercase;
+  padding-left: 30px;
+  line-height: 80%;
+  font-size: 20px;
+  float: left;
+  width: 23px;
+  height: 18px;
+  background: url(../images/backgrounds/menu-icon.png) no-repeat 0px 0px;
+  margin: 0;
+  position: absolute;
+  top: 50px;
+  left: 320px;
+}
+
+/* line 51, ../../app/assets/stylesheets/partials/_layout.scss */
+#main-menu {
+  background: url(../images/backgrounds/menu-icon.png) no-repeat 0px 0px;
+  background-position: -100px -100px;
+}
+/* line 54, ../../app/assets/stylesheets/partials/_layout.scss */
+#main-menu ul li {
+  margin: 0;
+}
+/* line 55, ../../app/assets/stylesheets/partials/_layout.scss */
+#main-menu ul li#btn-inicio a span {
+  background-position: 0 1px;
+}
+/* line 56, ../../app/assets/stylesheets/partials/_layout.scss */
+#main-menu ul li#btn-inicio a:hover span {
+  background-position: 0 -47px;
+}
+/* line 58, ../../app/assets/stylesheets/partials/_layout.scss */
+#main-menu ul li#btn-portafolio a span {
+  background-position: 0 -97px;
+}
+/* line 59, ../../app/assets/stylesheets/partials/_layout.scss */
+#main-menu ul li#btn-portafolio a:hover span {
+  background-position: 0 -145px;
+}
+/* line 62, ../../app/assets/stylesheets/partials/_layout.scss */
+#main-menu ul li#btn-matrimonio a span {
+  background-position: 0 -190px;
+}
+/* line 63, ../../app/assets/stylesheets/partials/_layout.scss */
+#main-menu ul li#btn-matrimonio a:hover span {
+  background-position: 0 -238px;
+}
+/* line 65, ../../app/assets/stylesheets/partials/_layout.scss */
+#main-menu ul li#btn-ninos a span {
+  background-position: 0 -190px;
+}
+/* line 66, ../../app/assets/stylesheets/partials/_layout.scss */
+#main-menu ul li#btn-ninos a:hover span {
+  background-position: 0 -238px;
+}
+/* line 68, ../../app/assets/stylesheets/partials/_layout.scss */
+#main-menu ul li#btn-moda a span {
+  background-position: 0 -190px;
+}
+/* line 69, ../../app/assets/stylesheets/partials/_layout.scss */
+#main-menu ul li#btn-moda a:hover span {
+  background-position: 0 -238px;
+}
+/* line 71, ../../app/assets/stylesheets/partials/_layout.scss */
+#main-menu ul li#btn-bio a span {
+  background-position: 0 -494px;
+}
+/* line 72, ../../app/assets/stylesheets/partials/_layout.scss */
+#main-menu ul li#btn-bio a:hover span {
+  background-position: 0 -542px;
+}
+/* line 74, ../../app/assets/stylesheets/partials/_layout.scss */
+#main-menu ul li#btn-descarga a span {
+  background-position: 0 -596px;
+}
+/* line 75, ../../app/assets/stylesheets/partials/_layout.scss */
+#main-menu ul li#btn-descarga a:hover span {
+  background-position: 0 -644px;
+}
+/* line 77, ../../app/assets/stylesheets/partials/_layout.scss */
+#main-menu ul li#btn-videos a span {
+  background-position: 0 -694px;
+}
+/* line 78, ../../app/assets/stylesheets/partials/_layout.scss */
+#main-menu ul li#btn-videos a:hover span {
+  background-position: 0 -742px;
+}
+/* line 81, ../../app/assets/stylesheets/partials/_layout.scss */
+#main-menu ul li a {
+  padding-left: 30px;
+  color: white;
+  font-size: 18px;
+  display: block;
+}
+/* line 112, ../../app/assets/stylesheets/partials/_mixins.scss */
+#main-menu ul li a:hover {
+  background: url(../images/backgrounds/filter-white.png);
+  color: #8add00;
+}
+/* line 99, ../../app/assets/stylesheets/partials/_mixins.scss */
+#main-menu ul li a span {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: url(../images/backgrounds/icons.png) no-repeat;
+  display: block;
+  padding-left: 40px;
+}
+/* line 86, ../../app/assets/stylesheets/partials/_layout.scss */
+#main-menu ul li ul li a {
+  padding-left: 60px;
+}
+
+/* line 96, ../../app/assets/stylesheets/partials/_layout.scss */
+#contact-info {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  margin-left: 40px;
+}
+/* line 101, ../../app/assets/stylesheets/partials/_layout.scss */
+#contact-info p {
+  margin: 0;
+}
+/* line 103, ../../app/assets/stylesheets/partials/_layout.scss */
+#contact-info p a#contact-us {
+  display: block;
+  background: #8add00;
+  padding: 5px 15px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+/* line 107, ../../app/assets/stylesheets/partials/_layout.scss */
+#contact-info p span {
+  padding-left: 30px;
+  color: white;
+  font-size: 18px;
+  display: block;
+  background: url(../images/backgrounds/icons.png) no-repeat;
+}
+/* line 112, ../../app/assets/stylesheets/partials/_mixins.scss */
+#contact-info p span:hover {
+  background: url(../images/backgrounds/filter-white.png);
+  color: #8add00;
+}
+/* line 99, ../../app/assets/stylesheets/partials/_mixins.scss */
+#contact-info p span span {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: url(../images/backgrounds/icons.png) no-repeat;
+  display: block;
+  padding-left: 40px;
+}
+/* line 110, ../../app/assets/stylesheets/partials/_layout.scss */
+#contact-info p span.phone {
+  background-position: -10px -999px;
+}
+/* line 111, ../../app/assets/stylesheets/partials/_layout.scss */
+#contact-info p span.phone:hover {
+  background: url(../images/backgrounds/icons.png) no-repeat;
+  background-position: -10px -1047px;
+}
+/* line 113, ../../app/assets/stylesheets/partials/_layout.scss */
+#contact-info p span.email {
+  background-position: -10px -1092px;
+}
+/* line 114, ../../app/assets/stylesheets/partials/_layout.scss */
+#contact-info p span.email:hover {
+  background: url(../images/backgrounds/icons.png) no-repeat;
+  background-position: -10px -1140px;
+}
+
+/* line 120, ../../app/assets/stylesheets/partials/_layout.scss */
+.shared-social.follow p {
+  margin: 0 0 0 40px;
+  color: #8add00;
+  font-size: 20px;
+}
+/* line 124, ../../app/assets/stylesheets/partials/_layout.scss */
+.shared-social ul li {
+  margin: 0;
+}
+/* line 126, ../../app/assets/stylesheets/partials/_layout.scss */
+.shared-social ul li.btn-facebook a span {
+  background-position: 0 -792px;
+}
+/* line 127, ../../app/assets/stylesheets/partials/_layout.scss */
+.shared-social ul li.btn-facebook a:hover span {
+  background-position: 0 -840px;
+}
+/* line 129, ../../app/assets/stylesheets/partials/_layout.scss */
+.shared-social ul li.btn-twitter a span {
+  background-position: 0 -900px;
+}
+/* line 130, ../../app/assets/stylesheets/partials/_layout.scss */
+.shared-social ul li.btn-twitter a:hover span {
+  background-position: 0 -948px;
+}
+/* line 131, ../../app/assets/stylesheets/partials/_layout.scss */
+.shared-social ul li a {
+  padding-left: 30px;
+  color: white;
+  font-size: 18px;
+  display: block;
+}
+/* line 112, ../../app/assets/stylesheets/partials/_mixins.scss */
+.shared-social ul li a:hover {
+  background: url(../images/backgrounds/filter-white.png);
+  color: #8add00;
+}
+/* line 99, ../../app/assets/stylesheets/partials/_mixins.scss */
+.shared-social ul li a span {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: url(../images/backgrounds/icons.png) no-repeat;
+  display: block;
+  padding-left: 40px;
+}
+
+/* 
+---------------------------------
+Content
+--------------------------------- 
+*/
+/* line 147, ../../app/assets/stylesheets/partials/_layout.scss */
+h2.page-title, h3.user-title {
+  padding: 5px 15px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  font-size: 20px;
+  margin-bottom: 15px;
+  background: url(../images/backgrounds/filter-black.png);
+  font-size: 26px;
+}
+
+/* line 160, ../../app/assets/stylesheets/partials/_layout.scss */
+.gallery li {
+  margin: 0 5px 5px 0;
+  float: left;
+  width: 180px;
+}
+/* line 163, ../../app/assets/stylesheets/partials/_layout.scss */
+.gallery li a {
+  width: 180px;
+  float: left;
+}
+
+@media only screen and (max-width: 767px) {
+  /* line 2, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container {
+    width: 100%;
+  }
+  /* line 14, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container header.main.one-third.column {
+    height: 90px !important;
+    width: 100%;
+  }
+  /* line 17, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container header.main.one-third.column .inner {
+    height: 90px !important;
+    padding: 5px 0 0 !important;
+    min-height: 90px;
+    *height: auto !important;
+    height: 90px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  /* line 23, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .two-thirds.column {
+    width: 100%;
+  }
+  /* line 5, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #menu-button {
+    display: block;
+    cursor: pointer;
+  }
+  /* line 29, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #main-menu {
+    display: none;
+    position: absolute;
+    top: 140px;
+    right: 10%;
+    background: url(../images/backgrounds/filter-black-darker.png);
+    width: 80%;
+  }
+  /* line 31, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #main-menu.menu-open {
+    display: block;
+  }
+  /* line 34, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #main-menu ul {
+    padding: 5%;
+    margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  /* line 37, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #main-menu ul li {
+    border-bottom: 1px solid #444444;
+    background: url(../images/backgrounds/symbols.png) no-repeat 100% 10px;
+  }
+  /* line 129, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #main-menu ul li li {
+    background-position: 100% -167px;
+  }
+  /* line 41, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #main-menu ul ul {
+    padding: 0;
+  }
+  /* line 44, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #main-menu ul ul li:nth-last-child(1) {
+    border-bottom: 0;
+  }
+  /* line 53, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow {
+    position: absolute;
+    top: 5px;
+    right: 200px;
+  }
+  /* line 55, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow p {
+    margin: 0;
+  }
+  /* line 58, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow ul {
+    margin: 5px 0 0 40px;
+  }
+  /* line 61, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow ul li a {
+    padding: 0;
+  }
+  /* line 63, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow ul li a span {
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+    padding-left: 25px;
+  }
+  /* line 70, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow ul li.btn-facebook span {
+    background-position: -10px -798px !important;
+  }
+  /* line 73, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow ul li.btn-facebook a:hover span {
+    background-position: -10px -846px !important;
+  }
+  /* line 78, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow ul li.btn-twitter span {
+    background-position: -10px -904px !important;
+  }
+  /* line 81, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow ul li.btn-twitter a:hover span {
+    background-position: -10px -952px !important;
+  }
+  /* line 90, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #contact-info {
+    bottom: auto;
+    top: 5px;
+    left: auto;
+    right: 20px;
+    margin: 0;
+    padding-top: 30px;
+  }
+  /* line 92, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #contact-info #contact-us {
+    margin-bottom: 0;
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 2, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container {
+    width: 100%;
+  }
+  /* line 14, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container header.main.one-third.column {
+    height: 90px !important;
+    width: 100%;
+  }
+  /* line 17, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container header.main.one-third.column .inner {
+    height: 90px !important;
+    padding: 5px 0 0 !important;
+    min-height: 90px;
+    *height: auto !important;
+    height: 90px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  /* line 23, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .two-thirds.column {
+    width: 100%;
+  }
+  /* line 5, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #menu-button {
+    display: block;
+    cursor: pointer;
+  }
+  /* line 29, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #main-menu {
+    display: none;
+    position: absolute;
+    top: 140px;
+    right: 10%;
+    background: url(../images/backgrounds/filter-black-darker.png);
+    width: 80%;
+  }
+  /* line 31, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #main-menu.menu-open {
+    display: block;
+  }
+  /* line 34, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #main-menu ul {
+    padding: 5%;
+    margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  /* line 37, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #main-menu ul li {
+    border-bottom: 1px solid #444444;
+    background: url(../images/backgrounds/symbols.png) no-repeat 100% 10px;
+  }
+  /* line 129, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #main-menu ul li li {
+    background-position: 100% -167px;
+  }
+  /* line 41, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #main-menu ul ul {
+    padding: 0;
+  }
+  /* line 44, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #main-menu ul ul li:nth-last-child(1) {
+    border-bottom: 0;
+  }
+  /* line 53, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow {
+    position: absolute;
+    top: 5px;
+    right: 200px;
+  }
+  /* line 55, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow p {
+    margin: 0;
+  }
+  /* line 58, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow ul {
+    margin: 5px 0 0 40px;
+  }
+  /* line 61, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow ul li a {
+    padding: 0;
+  }
+  /* line 63, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow ul li a span {
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+    padding-left: 25px;
+  }
+  /* line 70, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow ul li.btn-facebook span {
+    background-position: -10px -798px !important;
+  }
+  /* line 73, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow ul li.btn-facebook a:hover span {
+    background-position: -10px -846px !important;
+  }
+  /* line 78, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow ul li.btn-twitter span {
+    background-position: -10px -904px !important;
+  }
+  /* line 81, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow ul li.btn-twitter a:hover span {
+    background-position: -10px -952px !important;
+  }
+  /* line 90, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #contact-info {
+    bottom: auto;
+    top: 5px;
+    left: auto;
+    right: 20px;
+    margin: 0;
+    padding-top: 30px;
+  }
+  /* line 92, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #contact-info #contact-us {
+    margin-bottom: 0;
+    display: none;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  /* line 2, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container {
+    width: 100%;
+  }
+  /* line 14, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container header.main.one-third.column {
+    height: 90px !important;
+    width: 100%;
+  }
+  /* line 17, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container header.main.one-third.column .inner {
+    height: 90px !important;
+    padding: 5px 0 0 !important;
+    min-height: 90px;
+    *height: auto !important;
+    height: 90px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  /* line 23, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .two-thirds.column {
+    width: 100%;
+  }
+  /* line 5, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #menu-button {
+    display: block;
+    cursor: pointer;
+  }
+  /* line 29, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #main-menu {
+    display: none;
+    position: absolute;
+    top: 140px;
+    right: 10%;
+    background: url(../images/backgrounds/filter-black-darker.png);
+    width: 80%;
+  }
+  /* line 31, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #main-menu.menu-open {
+    display: block;
+  }
+  /* line 34, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #main-menu ul {
+    padding: 5%;
+    margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  /* line 37, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #main-menu ul li {
+    border-bottom: 1px solid #444444;
+    background: url(../images/backgrounds/symbols.png) no-repeat 100% 10px;
+  }
+  /* line 129, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #main-menu ul li li {
+    background-position: 100% -167px;
+  }
+  /* line 41, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #main-menu ul ul {
+    padding: 0;
+  }
+  /* line 44, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #main-menu ul ul li:nth-last-child(1) {
+    border-bottom: 0;
+  }
+  /* line 53, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow {
+    position: absolute;
+    top: 5px;
+    right: 200px;
+  }
+  /* line 55, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow p {
+    margin: 0;
+  }
+  /* line 58, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow ul {
+    margin: 5px 0 0 40px;
+  }
+  /* line 61, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow ul li a {
+    padding: 0;
+  }
+  /* line 63, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow ul li a span {
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+    padding-left: 25px;
+  }
+  /* line 70, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow ul li.btn-facebook span {
+    background-position: -10px -798px !important;
+  }
+  /* line 73, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow ul li.btn-facebook a:hover span {
+    background-position: -10px -846px !important;
+  }
+  /* line 78, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow ul li.btn-twitter span {
+    background-position: -10px -904px !important;
+  }
+  /* line 81, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container .shared-social.follow ul li.btn-twitter a:hover span {
+    background-position: -10px -952px !important;
+  }
+  /* line 90, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #contact-info {
+    bottom: auto;
+    top: 5px;
+    left: auto;
+    right: 20px;
+    margin: 0;
+    padding-top: 30px;
+  }
+  /* line 92, ../../app/assets/stylesheets/partials/_mixins.scss */
+  .container #contact-info #contact-us {
+    margin-bottom: 0;
+    display: none;
+  }
+}
+/* line 188, ../../app/assets/stylesheets/partials/_layout.scss */
+#carousel, #carousel ul, #carousel li {
+  min-height: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+/* line 198, ../../app/assets/stylesheets/partials/_layout.scss */
+#carousel {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  -webkit-transform-style: preserve-3d;
+}
+
+/* line 207, ../../app/assets/stylesheets/partials/_layout.scss */
+#carousel ul.animate {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* line 214, ../../app/assets/stylesheets/partials/_layout.scss */
+#carousel ul {
+  transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
+  -o-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
+  -ms-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
+  -moz-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
+  -webkit-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+}
+
+/* line 225, ../../app/assets/stylesheets/partials/_layout.scss */
+#carousel ul {
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* line 230, ../../app/assets/stylesheets/partials/_layout.scss */
+#carousel li {
+  float: left;
+  overflow: hidden;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+/* line 240, ../../app/assets/stylesheets/partials/_layout.scss */
+.admin-crud .btn {
+  background: url(../images/backgrounds/filter-black.png);
+  padding: 5px 10px;
+  color: white;
+  font-size: 24px;
 }

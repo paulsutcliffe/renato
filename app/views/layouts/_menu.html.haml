@@ -1,8 +1,8 @@
 %ul
   %li#btn-inicio
-    = link_to content_tag(:span, 'Inicio'), clientes_path
+    = link_to content_tag(:span, 'Inicio'), root_path
   %li#btn-portafolio
-    = link_to content_tag(:span, 'Portafolio'), cliente_albumes_path(current_cliente)
+    = link_to content_tag(:span, 'Portafolio'), albumes_path
     %ul
       %li#btn-matrimonio
         = link_to content_tag(:span, 'Matrimonio'), '/'

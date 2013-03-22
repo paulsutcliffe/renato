@@ -1,0 +1,159 @@
+@mixin responsive-skin {
+  .container {
+      width: 100%;
+    @include responsive-header;
+    #menu-button {
+      display: block; 
+      cursor: pointer;
+    }
+    @include responsive-menu;
+  }
+}
+
+@mixin responsive-header {
+    header.main.one-third.column {
+      height: 90px !important;
+      width: 100%;
+      .inner {
+        height: 90px !important; padding: 5px 0 0 !important;
+        @include min-height(90px);
+        @include box-sizing(border-box);
+      }
+    }
+    .two-thirds.column {
+      width: 100%;
+    }
+}
+
+@mixin responsive-menu {
+    #main-menu {
+      display: none;  position: absolute; top: 140px; right: 10%; background: $filter-dark; width: 80%;
+        &.menu-open {
+          display: block;
+      }
+      ul {
+        padding: 5%; margin: 0;
+        @include box-sizing(border-box); 
+        li {
+          @include menu-responsive;
+          @include plus_minus;
+          }
+          ul {
+            padding: 0;
+            li {
+              &:nth-last-child(1) {
+                border-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+
+
+  .shared-social.follow {
+    position: absolute; top: 5px; right: 200px;
+    p {
+      margin: 0;
+    }
+    ul {
+      margin: 5px 0 0 $space * 8;
+      li {
+        a {
+          padding: 0;
+          span {
+            padding-top: 3px !important;
+            padding-bottom: 3px !important;
+            padding-left: 25px;
+          }
+        }
+        &.btn-facebook{
+          span {
+           background-position: -10px -798px !important;
+          }
+          a:hover span {
+           background-position: -10px -846px !important;
+          }
+        }
+        &.btn-twitter{
+          span {
+            background-position: -10px -904px !important;
+          }
+          a:hover span {
+            background-position: -10px -952px !important;
+          }
+
+        }
+
+      }
+    }
+  }
+  #contact-info {
+    bottom: auto; top: 5px; left: auto; right: 20px; margin: 0; padding-top: 30px;
+    #contact-us {
+      margin-bottom: 0; display: none;
+    }
+  }
+}
+
+@mixin menu-span-icons {
+  span {
+    padding-top: $space*2; padding-bottom: $space*2;
+    background: $icons;
+    display: block;
+    padding-left: 40px;
+  }
+}
+
+@mixin menu-anchors {
+  padding-left: $space*6;
+  color: white;
+  font-size: $font-menu;
+  display: block;
+  &:hover {
+    background: $filter-white;
+    color: $green;
+  }
+  @include menu-span-icons;
+}
+
+@mixin border-bottom {
+  border-bottom: 1px solid $gray;
+} 
+
+@mixin menu-responsive {
+  @include border-bottom; 
+}
+
+@mixin plus_minus {
+  background: $symbols;
+  li {
+    background-position: 100% -167px;
+  }
+}
+
+
+@mixin button {
+  padding: $space $space*3;
+  @include inline-block;
+  font-size: $font-size-2;
+  margin-bottom: $space-vertical;
+}
+
+@mixin inline-block {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+@mixin min-height($value) {
+  min-height: $value;
+  *height: auto !important;
+  height: $value;
+}
+
+@mixin box-sizing($value) {
+  -moz-box-sizing: $value;
+  -webkit-box-sizing: $value;
+  -o-box-sizing: $value;
+  box-sizing: $value;
+}

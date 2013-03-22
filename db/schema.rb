@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130313013611) do
+ActiveRecord::Schema.define(:version => 20130320042628) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -37,6 +37,15 @@ ActiveRecord::Schema.define(:version => 20130313013611) do
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "backgrounds", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "background_picture_file_name"
+    t.string   "background_picture_content_type"
+    t.integer  "background_picture_file_size"
+    t.datetime "background_picture_updated_at"
   end
 
   create_table "categorias", :force => true do |t|
@@ -83,16 +92,16 @@ ActiveRecord::Schema.define(:version => 20130313013611) do
 
   create_table "fotos", :force => true do |t|
     t.string   "titulo"
-    t.boolean  "publico",                    :default => false
+    t.boolean  "publico",                   :default => false
     t.integer  "album_id"
     t.integer  "categoria_id"
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "fotos_picture_file_name"
-    t.string   "fotos_picture_content_type"
-    t.integer  "fotos_picture_file_size"
-    t.datetime "fotos_picture_updated_at"
+    t.string   "foto_picture_file_name"
+    t.string   "foto_picture_content_type"
+    t.integer  "foto_picture_file_size"
+    t.datetime "foto_picture_updated_at"
   end
 
   create_table "videos", :force => true do |t|

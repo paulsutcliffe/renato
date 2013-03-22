@@ -1,7 +1,13 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+//
+// Application Stylesheet
+//
 
-@import "compass/reset";
-@import "susy";
+@import "skeleton/base.css";
+@import "skeleton/skeleton.css";
+
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/layout";
+
+@import "http://fonts.googleapis.com/css?family=Marvel:400,700,400italic,700italic"
+

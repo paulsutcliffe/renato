@@ -1,5 +1,7 @@
 Renato::Application.routes.draw do
 
+  resources :backgrounds
+
   get "home/index"
 
   root :to => "home#index"

@@ -17,6 +17,6 @@
 
   .field
     = f.label :cliente_id 
-    = f.collection_select :cliente_id, Cliente.all, :id, :nombre
+    = f.collection_select :cliente_id, Cliente.all, :id, :nombre, {:include_blank => 'None'}
   .actions
     = f.submit 'Save'
