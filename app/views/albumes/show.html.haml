@@ -1,3 +1,11 @@
+- content_for :javascript do
+  = stylesheet_link_tag '/javascripts/libs/flare/jquery.pixelentity.flare.min.css'
+  = javascript_include_tag '/javascripts/libs/flare/jquery.pixelentity.flare.min.js'
+  :javascript
+    jQuery(function($){
+      $('a[data-target="flare"]').peFlareLightbox();
+    });
+
 #content
   %h2.page-title
     = @album.nombre
@@ -16,9 +24,8 @@
     %ul
       - @fotos.each do |foto|
         %li
-          = link_to image_tag(foto.foto_picture(:index)), foto.foto_picture(:show), :class => 'lightbox', :rel => 'gallery'
-     
-
+          = flare_lightbox(foto.foto_picture(:index), foto.foto_picture(:show), foto.foto_picture(:index))
+    = will_paginate @fotos 
 
 
 
