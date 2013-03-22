@@ -7,12 +7,12 @@
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
 Album.delete_all
-album_1 = Album.create!(:nombre => 'Fiesta N1')
-album_2 = Album.create!(:nombre => 'Sesión Fotos')
-album_3 = Album.create!(:nombre => 'Gran Tono')
-album_1.fotos.create!(:foto_picture => File.open(File.join(Rails.root, '/features/support/images/foto_picture.jpg')))
-album_2.fotos.create!(:foto_picture => File.open(File.join(Rails.root, '/features/support/images/foto_picture.jpg')))
-album_3.fotos.create!(:foto_picture => File.open(File.join(Rails.root, '/features/support/images/foto_picture.jpg')))
+1.upto(25) do |i|
+  Album.create!(:nombre => 'Fiesta N ' + "#{i}").fotos.create!(:foto_picture => File.open(File.join(Rails.root, '/features/support/images/foto_picture.jpg')))
+
+end
+
+##album_13.fotos.create!(:foto_picture => File.open(File.join(Rails.root, '/features/support/images/foto_picture.jpg')))
 
 Background.delete_all
 Background.create!(:background_picture => File.open(File.join(Rails.root, '/features/support/backgrounds/sample-1.jpg')))

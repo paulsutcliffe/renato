@@ -12,4 +12,9 @@ class FotosController < InheritedResources::Base
 #    @album = Album.find(params[:album_id])
 #    @foto = @album.fotos.new(params[:foto])
 #  end
+
+
+  def create
+    create!{ albumes_path }
+  end
 end

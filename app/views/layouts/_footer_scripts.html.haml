@@ -7,3 +7,13 @@
 = javascript_include_tag 'touch.js'
 
 = javascript_include_tag '/javascripts/libs/supersized/slideshow/js/jquery.easing.min.js', '/javascripts/libs/supersized/slideshow/js/supersized.3.2.7.min.js', '/javascripts/libs/supersized-init.js'
+
+// jquery lazyload
+= javascript_include_tag '/javascripts/libs/lazyload/jquery.lazyload.min.js'
+:javascript
+  $(function() {
+    $("img").lazyload({
+      effect : "fadeIn"
+    });
+  });
+

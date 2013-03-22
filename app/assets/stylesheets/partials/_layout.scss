@@ -158,13 +158,41 @@ h2.page-title, h3.user-title {
 
 .gallery {
   li {
-    margin: 0 $space $space 0;
+    margin: 0 $space*2 $space*3 0;
     float: left; width: 180px;
     a {
       width: 180px; 
       float: left;
+      &.caption {
+        background: $filter-black; color: white; text-align: center; padding: 2px 0;
+      }
     }
   }
+}
+
+.pagination {
+  float: left; clear: left; width: 100%;
+  text-align: right;
+  span {
+    &.next_page {}
+    &.previous_page {}
+    &.disabled {}
+  }
+  a {
+    &.next_page {}
+    &.previous_page {}
+    &:hover {
+      color: $green
+    }
+  }
+  em {
+    &.current {color: $green}
+  }
+  span, a, em {
+    background: $filter-black; @include inline-block; padding: 5px 15px; text-align: center;
+    text-transform: lowercase; color: white;
+  }
+
 }
 
 
@@ -241,5 +269,13 @@ h2.page-title, h3.user-title {
     background: $filter-black; padding: 5px 10px; color: white; font-size: 24px;
     &.create {}
 
+  }
+  &.admin-iterate {
+    background: $filter-black; margin-top: 2px;
+    float: left; width: 100%;
+    a {
+      color: white; float: left; width: auto; padding: 2px;
+      & + a {float: right}
+    }
   }
 } 

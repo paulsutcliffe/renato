@@ -336,7 +336,7 @@ h2.page-title, h3.user-title {
 
 /* line 160, ../../app/assets/stylesheets/partials/_layout.scss */
 .gallery li {
-  margin: 0 5px 5px 0;
+  margin: 0 10px 15px 0;
   float: left;
   width: 180px;
 }
@@ -344,6 +344,40 @@ h2.page-title, h3.user-title {
 .gallery li a {
   width: 180px;
   float: left;
+}
+/* line 166, ../../app/assets/stylesheets/partials/_layout.scss */
+.gallery li a.caption {
+  background: url(../images/backgrounds/filter-black.png);
+  color: white;
+  text-align: center;
+  padding: 2px 0;
+}
+
+/* line 173, ../../app/assets/stylesheets/partials/_layout.scss */
+.pagination {
+  float: left;
+  clear: left;
+  width: 100%;
+  text-align: right;
+}
+/* line 184, ../../app/assets/stylesheets/partials/_layout.scss */
+.pagination a:hover {
+  color: #8add00;
+}
+/* line 189, ../../app/assets/stylesheets/partials/_layout.scss */
+.pagination em.current {
+  color: #8add00;
+}
+/* line 191, ../../app/assets/stylesheets/partials/_layout.scss */
+.pagination span, .pagination a, .pagination em {
+  background: url(../images/backgrounds/filter-black.png);
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding: 5px 15px;
+  text-align: center;
+  text-transform: lowercase;
+  color: white;
 }
 
 @media only screen and (max-width: 767px) {
@@ -721,7 +755,7 @@ h2.page-title, h3.user-title {
     display: none;
   }
 }
-/* line 188, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 216, ../../app/assets/stylesheets/partials/_layout.scss */
 #carousel, #carousel ul, #carousel li {
   min-height: 100%;
   height: 100%;
@@ -730,7 +764,7 @@ h2.page-title, h3.user-title {
   position: relative;
 }
 
-/* line 198, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 226, ../../app/assets/stylesheets/partials/_layout.scss */
 #carousel {
   overflow: hidden;
   width: 100%;
@@ -740,7 +774,7 @@ h2.page-title, h3.user-title {
   -webkit-transform-style: preserve-3d;
 }
 
-/* line 207, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 235, ../../app/assets/stylesheets/partials/_layout.scss */
 #carousel ul.animate {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -748,7 +782,7 @@ h2.page-title, h3.user-title {
   transition: all 0.3s;
 }
 
-/* line 214, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 242, ../../app/assets/stylesheets/partials/_layout.scss */
 #carousel ul {
   transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
   -o-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
@@ -760,13 +794,13 @@ h2.page-title, h3.user-title {
   -webkit-transform-style: preserve-3d;
 }
 
-/* line 225, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 253, ../../app/assets/stylesheets/partials/_layout.scss */
 #carousel ul {
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   position: relative;
 }
 
-/* line 230, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 258, ../../app/assets/stylesheets/partials/_layout.scss */
 #carousel li {
   float: left;
   overflow: hidden;
@@ -774,10 +808,28 @@ h2.page-title, h3.user-title {
   -webkit-transform: translate3d(0, 0, 0);
 }
 
-/* line 240, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 268, ../../app/assets/stylesheets/partials/_layout.scss */
 .admin-crud .btn {
   background: url(../images/backgrounds/filter-black.png);
   padding: 5px 10px;
   color: white;
   font-size: 24px;
+}
+/* line 273, ../../app/assets/stylesheets/partials/_layout.scss */
+.admin-crud.admin-iterate {
+  background: url(../images/backgrounds/filter-black.png);
+  margin-top: 2px;
+  float: left;
+  width: 100%;
+}
+/* line 276, ../../app/assets/stylesheets/partials/_layout.scss */
+.admin-crud.admin-iterate a {
+  color: white;
+  float: left;
+  width: auto;
+  padding: 2px;
+}
+/* line 278, ../../app/assets/stylesheets/partials/_layout.scss */
+.admin-crud.admin-iterate a + a {
+  float: right;
 }
