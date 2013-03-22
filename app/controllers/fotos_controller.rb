@@ -15,6 +15,14 @@ class FotosController < InheritedResources::Base
 
 
   def create
-    create!{ album_path(@album) }
+    create!{album_path(@album)}
+  end
+  
+  def update
+    update!{album_path(@album)}
+  end
+
+  def destroy
+    destroy!{album_path(@album)}
   end
 end

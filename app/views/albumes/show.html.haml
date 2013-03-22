@@ -25,7 +25,21 @@
       - @fotos.each do |foto|
         %li
           = flare_lightbox(foto.foto_picture(:index), foto.foto_picture(:show), foto.foto_picture(:index))
+          .admin-crud.admin-iterate
+            = link_to 'Edit', edit_album_foto_path(@album,foto)
+            = link_to 'Destroy', album_foto_path(@album, foto), :confirm => 'Are you sure?', :method => :delete
     = will_paginate @fotos 
+
+-#
+  ojo, al intentar borrar el country_picture, me arrojaba un error:
+  ActionController::InvalidAuthenticityToken
+
+  Links de soluciones:
+  http://stackoverflow.com/questions/3364492/actioncontrollerinvalidauthenticitytoken
+  http://stackoverflow.com/questions/4678095/getting-rid-of-actioncontrollerinvalidauthenticitytoken-rails-3-webrick-dev
+
+  Se empleó el segundo, que dice que en el config/environments/development.rb hay que agregar esta línea:
+  config.action_controller.allow_forgery_protection = false
 
 
 

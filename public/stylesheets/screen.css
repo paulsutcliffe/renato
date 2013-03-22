@@ -817,7 +817,7 @@ h2.page-title, h3.user-title {
   color: white;
 }
 /* line 277, ../../app/assets/stylesheets/partials/_layout.scss */
-.admin-crud.admin-head {
+.btn.back + .admin-crud.admin-head {
   display: inline-block;
   *display: inline;
   *zoom: 1;

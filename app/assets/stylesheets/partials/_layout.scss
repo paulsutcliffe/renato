@@ -274,7 +274,7 @@ h2.page-title, h3.user-title {
     &.create {}
 
   }
-  &.admin-head {
+  .btn.back + &.admin-head {
     @include inline-block;
   }
   &.admin-iterate {
