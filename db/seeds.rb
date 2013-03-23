@@ -6,21 +6,20 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
+long_text = File.read(File.join(Rails.root, '/features/support/long_text.txt'))
+
 Album.delete_all
 1.upto(25) do |i|
   Album.create!(:nombre => 'Fiesta N ' + "#{i}").fotos.create!(:foto_picture => File.open(File.join(Rails.root, '/features/support/images/foto_picture.jpg')))
-
 end
 
-##album_13.fotos.create!(:foto_picture => File.open(File.join(Rails.root, '/features/support/images/foto_picture.jpg')))
+Bio.delete_all
+Bio.create!(:biografia => long_text, :bio_picture => File.open(File.join(Rails.root, '/features/support/images/img-renato.jpg')))
 
 Background.delete_all
-Background.create!(:background_picture => File.open(File.join(Rails.root, '/features/support/backgrounds/sample-1.jpg')))
-Background.create!(:background_picture => File.open(File.join(Rails.root, '/features/support/backgrounds/sample-2.jpg')))
-Background.create!(:background_picture => File.open(File.join(Rails.root, '/features/support/backgrounds/sample-3.jpg')))
-Background.create!(:background_picture => File.open(File.join(Rails.root, '/features/support/backgrounds/sample-4.jpg')))
-Background.create!(:background_picture => File.open(File.join(Rails.root, '/features/support/backgrounds/sample-5.jpg')))
-Background.create!(:background_picture => File.open(File.join(Rails.root, '/features/support/backgrounds/sample-6.jpg')))
+1.upto(6) do |i|
+  Background.create!(:background_picture => File.open(File.join(Rails.root, '/features/support/backgrounds/sample-' + "#{i}" +'.jpg')))
+end
 
 Categoria.delete_all
 categoria = Categoria.create!(:nombre => 'Matrimonio')
@@ -31,4 +30,8 @@ categoria_3 = Categoria.create!(:nombre => 'Moda')
 Cliente.delete_all
 Cliente.create!(:nombre => 'pedro', :apellido => 'sinclaire', :email => 'pedro@test.com', :password => '1234567')
 Cliente.create!(:nombre => 'pablo', :apellido => 'sinclaire', :email => 'pablo@test.com', :password => '1234567')
+
+Information.delete_all
+Information.create!(:telefono => '9986521463', :email => 'renato@ghilardi.com', :facebook => 'http://www.google.com', :twitter => 'http://www.google.com')
+
 

@@ -1,5 +1,9 @@
 Renato::Application.routes.draw do
 
+  resources :bios
+
+  resources :information
+
   resources :backgrounds
 
   get "home/index"

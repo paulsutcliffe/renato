@@ -8,8 +8,8 @@
 
   .field
     = f.label :nombre
-    = f.text_field :nombre
-  .field
+    = f.text_field :nombre, :placeholder => I18n.t('album.placeholder.nombre')
+  .field.date-select
     = f.label :fecha
     = f.date_select :fecha
 
@@ -19,4 +19,4 @@
     = f.label :cliente_id 
     = f.collection_select :cliente_id, Cliente.all, :id, :nombre, {:include_blank => 'None'}
   .actions
-    = f.submit 'Save'
+    = f.submit I18n.t('save')

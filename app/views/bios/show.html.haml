@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Biografia:
+  = @bio.biografia
+
+= link_to 'Edit', edit_bio_path(@bio)
+\|
+= link_to 'Back', bios_path

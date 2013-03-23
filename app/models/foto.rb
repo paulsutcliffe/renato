@@ -11,5 +11,5 @@ class Foto < ActiveRecord::Base
     :show => {:geometry => '600x400#'}
   }
 
-  scope :tipo_de_foto, lambda {|query|  where("categoria_id like ? AND publico like ?", "%#{query}", true)   }
+  scope :tipo_de_foto, lambda {|query| where("categoria_id like ? AND publico like ?", "%#{query}", true) }
 end

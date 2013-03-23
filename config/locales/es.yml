@@ -1,8 +1,19 @@
 es:
+  cancel: Cancelar
+  save: Guardar 
+  send: Enviar
+
   albumes:
     index: Albumes
   album:
     back: Volver a los Álbumes
+    new: Crear Álbum
+    placeholder:
+      nombre: 'Ej: Pedro Flores'
+
+  bio:
+    index:
+      edit: Editar Biografía
 
   will_paginate:
     previous_label: "&#8592; Anterior"

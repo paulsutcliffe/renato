@@ -1,23 +1,22 @@
 %ul
   %li#btn-inicio
-    = link_to content_tag(:span, 'Inicio'), root_path
+    = link_to_unless_controller('Inicio', root_path, 'home')
   %li#btn-portafolio
-    = link_to content_tag(:span, 'Portafolio'), albumes_path
+    = link_to_unless_controller('Portafolio', albumes_path, 'albumes')
     %ul
-      %li#btn-matrimonio
-        = link_to content_tag(:span, 'Matrimonio'), fotos_path(:categoria_id => 'Matrimonio')
-      %li#btn-ninos
-        = link_to content_tag(:span, 'Niños'), fotos_path(:categoria_id => 'Niños')
-      %li#btn-moda
-        = link_to content_tag(:span, 'Moda'), fotos_path(:categoria_id => 'Moda')
+      %li.portafolio-submenu 
+        = link_to_unless_content_type('Matrimonio', fotos_path(:categoria_id => 'Matrimonio'), params[:categoria_id], 'Matrimonio')
+      %li.portafolio-submenu 
+        = link_to_unless_content_type('Niños', fotos_path(:categoria_id => 'Niños'), params[:categoria_id], 'Niños')
+      %li.portafolio-submenu 
+        = link_to_unless_content_type('Moda', fotos_path(:categoria_id => 'Moda'), params[:categoria_id], 'Moda')
 
   %li#btn-bio
-    = link_to content_tag(:span, 'Bio'), '/'
-
+    = link_to_unless_controller('Bio', bios_path, 'bios')
   %li#btn-descarga
-    = link_to content_tag(:span, 'Descarga tus fotos'), '/'
+    = link_to_unless_controller('Descarga tus fotos', root_path, 'download')
 
   %li#btn-videos
-    = link_to content_tag(:span, 'Videos'), '/'
+    = link_to_unless_controller('Videos', videos_path, 'videos')
 
 

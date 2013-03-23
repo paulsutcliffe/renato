@@ -1,0 +1,17 @@
+= form_for @bio, :html => {:multipart => true} do |f|
+  -if @bio.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@bio.errors.count, "error")} prohibited this bio from being saved:"
+      %ul
+        - @bio.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :biografia
+    = f.text_area :biografia
+
+  .field
+    = f.label :bio_picture
+    = f.file_field :bio_picture
+  .actions
+    = f.submit I18n.t('save')

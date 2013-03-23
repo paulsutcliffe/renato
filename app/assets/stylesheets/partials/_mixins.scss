@@ -96,11 +96,18 @@
 }
 
 @mixin menu-span-icons {
-  span {
+  span, i {
     padding-top: $space*2; padding-bottom: $space*2;
     background: $icons;
     display: block;
     padding-left: 40px;
+  }
+
+  b {
+    background: $filter-white; 
+    i {
+      color: $green;
+    }
   }
 }
 
@@ -131,6 +138,10 @@
   }
 }
 
+@mixin button_default {
+  padding: 5px 10px; color: white; font-size: 24px; color: white; 
+  border: 0;
+}
 
 @mixin button {
   padding: $space $space*3;
@@ -140,7 +151,16 @@
 }
 
 @mixin button_black {
-  background: $filter-black; padding: 5px 10px; color: white; font-size: 24px; color: white;
+  background: $filter-black;
+  @include button_default;
+}
+
+@mixin button_green {
+  @include button_default; 
+  background: $green; color: black;
+  &:hover {
+    border: 0;
+  }
 }
 
 @mixin inline-block {

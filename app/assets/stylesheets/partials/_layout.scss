@@ -53,37 +53,38 @@ position: absolute; top: 50px; left: 320px;}
   ul {
     li {
       &#btn-inicio a span {background-position: 0 1px}
-      &#btn-inicio a:hover span {background-position: 0 -47px}
+      &#btn-inicio a:hover span, &#btn-inicio b i {background-position: 0 -47px}
 
       &#btn-portafolio a span {background-position: 0 -97px}
-      &#btn-portafolio a:hover span {background-position: 0 -145px}
+      &#btn-portafolio a:hover span, &#btn-portafolio b i {background-position: 0 -145px}
 
 
-      &#btn-matrimonio a span {background-position: 0 -190px}
-      &#btn-matrimonio a:hover span {background-position: 0 -238px}
+      &.portafolio-submenu a span {background-position: 0 -190px !important}
+      &.portafolio-submenu a:hover span, &.portafolio-submenu b i {background-position: 0 -238px !important}
 
       &#btn-ninos a span {background-position: 0 -190px}
-      &#btn-ninos a:hover span {background-position: 0 -238px}
+      &#btn-ninos a:hover span, &#btn-ninos b i {background-position: 0 -238px}
 
       &#btn-moda a span {background-position: 0 -190px}
-      &#btn-moda a:hover span {background-position: 0 -238px}
+      &#btn-moda a:hover span, &#btn-moda b i {background-position: 0 -238px}
 
       &#btn-bio a span {background-position: 0 -494px}
-      &#btn-bio a:hover span {background-position: 0 -542px}
+      &#btn-bio a:hover span, &#btn-bio b i {background-position: 0 -542px}
 
       &#btn-descarga a span {background-position: 0 -596px}
-      &#btn-descarga a:hover span {background-position: 0 -644px}
+      &#btn-descarga a:hover span, &#btn-descarga b i {background-position: 0 -644px}
 
       &#btn-videos a span {background-position: 0 -694px}
-      &#btn-videos a:hover span {background-position: 0 -742px}
+      &#btn-videos a:hover span, &#btn-videos b i {background-position: 0 -742px}
 
       margin: 0;
-      a {
+      @include menu-span-icons;
+      a, b {
         @include menu-anchors; 
       }
       ul {
         li {
-          a {
+          a, b {
             padding-left: $space*12;
           }
         }
@@ -269,6 +270,7 @@ h2.page-title, h3.user-title {
   
 
 .admin-crud {
+  padding-bottom: 30px;
   .btn {
     @include button_black;
     &.create {}
@@ -291,4 +293,31 @@ a.btn {
   @include button_black; @include inline-block;
   &.back {}
 
+}
+
+
+form {
+  padding: $space*4 $space*3;
+  background: $filter-black;
+  .field {
+    padding: 0 0 $space-vertical;
+    label {
+      color: white; font-size: 16px
+    }
+
+    input, select {margin: 0}
+  
+    &.date-select {
+      select {
+        @include inline-block; width: 100px;
+      }
+    }
+  }
+
+  .actions {
+    padding-top: 10px;
+    input[type="submit"] {
+      @include button-green;
+    }
+  }
 }

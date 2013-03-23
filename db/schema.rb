@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130320042628) do
+ActiveRecord::Schema.define(:version => 20130323200336) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -46,6 +46,16 @@ ActiveRecord::Schema.define(:version => 20130320042628) do
     t.string   "background_picture_content_type"
     t.integer  "background_picture_file_size"
     t.datetime "background_picture_updated_at"
+  end
+
+  create_table "bios", :force => true do |t|
+    t.text     "biografia"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "bio_picture_file_name"
+    t.string   "bio_picture_content_type"
+    t.integer  "bio_picture_file_size"
+    t.datetime "bio_picture_updated_at"
   end
 
   create_table "categorias", :force => true do |t|
@@ -102,6 +112,15 @@ ActiveRecord::Schema.define(:version => 20130320042628) do
     t.string   "foto_picture_content_type"
     t.integer  "foto_picture_file_size"
     t.datetime "foto_picture_updated_at"
+  end
+
+  create_table "information", :force => true do |t|
+    t.string   "telefono"
+    t.string   "email"
+    t.string   "facebook"
+    t.string   "twitter"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "videos", :force => true do |t|

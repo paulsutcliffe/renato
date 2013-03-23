@@ -1,5 +1,10 @@
-%h1 New album
+#content
+  %h2.page-title
+    = I18n.t('album.new')
+  
+  .admin-crud.admin-head
+    = link_to I18n.t('cancel'), albumes_path, :class => 'btn back'
 
-= render 'form'
+  .content
+    = render 'form'
 
-= link_to 'Back', albumes_path

@@ -1,0 +1,20 @@
+#content
+  %h2.page-title
+    Biografía
+
+  - if current_cliente
+    %h3.user-title
+      = current_cliente.nombre
+  
+  .admin-crud.admin-head
+    - if !@bio
+      = link_to I18n.t('bio.index'), new_bio_path, :class => 'btn create'
+    - else
+      = link_to I18n.t('bio.index.edit'), edit_bio_path(@bio), :class => 'btn create' 
+
+  - if @bio
+    %article.content
+      = paragraph(@bio.biografia)
+      %figure
+        = image_tag @bio.bio_picture(:index)
+      
