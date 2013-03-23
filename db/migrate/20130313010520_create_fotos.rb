@@ -4,7 +4,7 @@ class CreateFotos < ActiveRecord::Migration
       t.string :titulo
       t.boolean :publico, :default => false
       t.integer :album_id
-      t.integer :categoria_id
+      t.string :categoria_id
       t.string :slug
 
       t.timestamps

@@ -94,7 +94,7 @@ ActiveRecord::Schema.define(:version => 20130320042628) do
     t.string   "titulo"
     t.boolean  "publico",                   :default => false
     t.integer  "album_id"
-    t.integer  "categoria_id"
+    t.string   "categoria_id"
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"

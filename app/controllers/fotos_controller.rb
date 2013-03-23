@@ -1,18 +1,12 @@
 class FotosController < InheritedResources::Base
   belongs_to :album, :finder => :find_by_slug!
+#  belongs_to :categoria, :finder => :find_by_slug!
 
-
-
-#  def new
-#    @album = Album.find(params[:album_id])
-#    @foto = @album.fotos.new
-#  end
-#
-#  def create
-#    @album = Album.find(params[:album_id])
-#    @foto = @album.fotos.new(params[:foto])
-#  end
-
+  def index
+    @fotos = Foto.tipo_de_foto(params[:categoria_id])
+    # or
+    # @fotos = Foto.where("categoria_id = ?", params[:categoria_id])
+  end
 
   def create
     create!{album_path(@album)}

@@ -5,11 +5,11 @@
     = link_to content_tag(:span, 'Portafolio'), albumes_path
     %ul
       %li#btn-matrimonio
-        = link_to content_tag(:span, 'Matrimonio'), '/'
+        = link_to content_tag(:span, 'Matrimonio'), fotos_path(:categoria_id => 'Matrimonio')
       %li#btn-ninos
-        = link_to content_tag(:span, 'Niños'), '/'
+        = link_to content_tag(:span, 'Niños'), fotos_path(:categoria_id => 'Niños')
       %li#btn-moda
-        = link_to content_tag(:span, 'Moda'), '/'
+        = link_to content_tag(:span, 'Moda'), fotos_path(:categoria_id => 'Moda')
 
   %li#btn-bio
     = link_to content_tag(:span, 'Bio'), '/'

@@ -23,9 +23,9 @@ Background.create!(:background_picture => File.open(File.join(Rails.root, '/feat
 Background.create!(:background_picture => File.open(File.join(Rails.root, '/features/support/backgrounds/sample-6.jpg')))
 
 Categoria.delete_all
-categoria = Categoria.create!(:nombre => 'Matrimonios')
-categoria_2 = Categoria.create!(:nombre => 'Fiestas')
-categoria_3 = Categoria.create!(:nombre => 'Celebraciones')
+categoria = Categoria.create!(:nombre => 'Matrimonio')
+categoria_2 = Categoria.create!(:nombre => 'Niños')
+categoria_3 = Categoria.create!(:nombre => 'Moda')
 
 
 Cliente.delete_all
