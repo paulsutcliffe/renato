@@ -35,16 +35,16 @@
           = render 'shared/follow_social'
           #contact-info
             %p
-              = link_to 'Contactar', '/', :id => 'contact-us'
+              = link_to 'Contactar', new_contacto_path, :id => 'contact-us'
               %span.phone
                 9986521463
               %span.email
                 renato@ghilardi.com
+      
+          = render :partial => "contactos/form", :locals => {:contacto => Contacto.new}
       %section.two-thirds.column.alpha{:role => 'main'}
         .inner
           = yield
-   
-
 
     = render 'layouts/footer_scripts'
 

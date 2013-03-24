@@ -1,25 +1,36 @@
-= form_for @contacto do |f|
-  -if @contacto.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@contacto.errors.count, "error")} prohibited this contacto from being saved:"
-      %ul
-        - @contacto.errors.full_messages.each do |msg|
-          %li= msg
+- if params[:controller] == 'contactos'
+  = form_for @contacto do |f|
+    -if @contacto.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(@contacto.errors.count, "error")} prohibited this contacto from being saved:"
+        %ul
+          - @contacto.errors.full_messages.each do |msg|
+            %li= msg
 
-  .field
-    = f.label :nombre
-    = f.text_field :nombre
-  .field
-    = f.label :apellido
-    = f.text_field :apellido
-  .field
-    = f.label :email
-    = f.text_field :email
-  .field
-    = f.label :telefono
-    = f.text_field :telefono
-  .field
-    = f.label :comentario
-    = f.text_area :comentario
-  .actions
-    = f.submit 'Save'
+
+- else
+  = form_for contacto do |f|
+    -if contacto.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(@contacto.errors.count, "error")} prohibited this contacto from being saved:"
+        %ul
+          - contacto.errors.full_messages.each do |msg|
+            %li= msg
+  
+    .field
+      = f.label :nombre
+      = f.text_field :nombre, :placeholder => I18n.t('contacto.placeholder.nombre')
+    .field
+      = f.label :apellido
+      = f.text_field :apellido, :placeholder => I18n.t('contacto.placeholder.apellido')
+    .field
+      = f.label :email
+      = f.text_field :email, :placeholder => I18n.t('contacto.placeholder.email')
+    .field
+      = f.label :telefono
+      = f.text_field :telefono, :placeholder => I18n.t('contacto.placeholder.telefono')
+    .field
+      = f.label :comentario
+      = f.text_area :comentario, :rows => 10, :placeholder => I18n.t('contacto.placeholder.comentario')
+    .actions
+      = f.submit I18n.t('send')

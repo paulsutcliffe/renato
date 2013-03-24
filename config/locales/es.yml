@@ -15,6 +15,14 @@ es:
     index:
       edit: Editar Biografía
 
+  contacto:
+    placeholder:
+      nombre: 'Ej: Miguel'
+      apellido: 'Ej: Díaz'
+      email: 'Ej: miguel@gmail.com'
+      telefono: 'Número fijo o celular'
+      comentario: 'Su comentario'
+
   will_paginate:
     previous_label: "&#8592; Anterior"
     next_label: "Siguiente &#8594;"

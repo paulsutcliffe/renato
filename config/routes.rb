@@ -13,8 +13,6 @@ Renato::Application.routes.draw do
   resources :contactos
 
   root :to => 'inicio#index'
-  get "inicio/index"
-
   resources :videos
   resources :fotos
 

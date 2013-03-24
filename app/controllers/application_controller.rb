@@ -25,8 +25,7 @@ class ApplicationController < ActionController::Base
   
     @bodyclass = @action + ' ' + @front + ' ' + @admin
   end
-  
-  
+ 
   helper_method :bodyid
   helper_method :bodyclass
 end

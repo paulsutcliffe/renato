@@ -1,0 +1,17 @@
+.field
+  = f.label :nombre
+  = f.text_field :nombre, :placeholder => I18n.t('contacto.placeholder.nombre')
+.field
+  = f.label :apellido
+  = f.text_field :apellido, :placeholder => I18n.t('contacto.placeholder.apellido')
+.field
+  = f.label :email
+  = f.text_field :email, :placeholder => I18n.t('contacto.placeholder.email')
+.field
+  = f.label :telefono, 'teléfono'
+  = f.text_field :telefono, :placeholder => I18n.t('contacto.placeholder.telefono')
+.field
+  = f.label :comentario
+  = f.text_area :comentario, :rows => 10, :placeholder => I18n.t('contacto.placeholder.comentario')
+.actions
+  = f.submit I18n.t('send')

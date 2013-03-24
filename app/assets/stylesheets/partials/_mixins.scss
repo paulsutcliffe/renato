@@ -88,7 +88,7 @@
     }
   }
   #contact-info {
-    bottom: auto; top: 5px; left: auto; right: 20px; margin: 0; padding-top: 30px;
+    position: absolute; bottom: auto; top: 5px; left: auto; right: 20px; margin: 0; padding-top: 30px;
     #contact-us {
       margin-bottom: 0; display: none;
     }
@@ -180,4 +180,11 @@
   -webkit-box-sizing: $value;
   -o-box-sizing: $value;
   box-sizing: $value;
+}
+
+@mixin clearfix2 {
+  &:after {
+    content:"."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;
+  }
+  zoom: 1
 }

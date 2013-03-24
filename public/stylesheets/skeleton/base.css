@@ -142,9 +142,6 @@
 	  border: 1px solid #aaa;
 	  border-top: 1px solid #ccc;
 	  border-left: 1px solid #ccc;
-	  -moz-border-radius: 3px;
-	  -webkit-border-radius: 3px;
-	  border-radius: 3px;
 	  color: #444;
 	  display: inline-block;
 	  font-size: 11px;

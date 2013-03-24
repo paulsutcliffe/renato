@@ -1,6 +1,6 @@
 body {font: normal normal 16px/145% 'Marvel', sans-serif}
 h1, h2, h3, h4, h5, h6 {font-family: 'Marvel', sans-serif; font-weight: 400; color: white}
-p {color: white}
+p {color: white; text-align: justify}
 
 a {text-decoration: none}
 img {vertical-align: top}
@@ -40,6 +40,21 @@ h1#logo {
     b {
       display: block;
       font-size: 0.68em;
+    }
+  }
+}
+
+header {
+  form#new_contacto {
+    width: 400px; position: absolute; bottom: 20px; left: 110%;
+    .field, .actions {
+      width: 90%; margin: 0 auto;
+      label, input {@include inline-block; vertical-align: top}
+      label {width: 100px}
+      textarea {width: 100%; min-width: 100%}
+    }
+    .actions {
+      input {float: right}
     }
   }
 }
@@ -95,7 +110,7 @@ position: absolute; top: 50px; left: 320px;}
 
 
 #contact-info {
-  position: absolute; bottom: 40px; left: 0; 
+  /* position: absolute;*/ bottom: 40px; left: 0; 
   -moz-transition: all 0.3s ease-out; -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out; transition: all 0.3s ease-out;
   margin-left: $space *8;
@@ -267,7 +282,19 @@ h2.page-title, h3.user-title {
             -webkit-transform: translate3d(0,0,0);
         }
 
-  
+ 
+
+
+.box {
+  width: 280px; background: $filter-black; padding: $space*2; float: left;
+}
+ 
+#bios {
+  .content {
+    width: 100%; @include clearfix2;
+    figure {float: left; padding-left: 10px}
+  }
+}
 
 .admin-crud {
   padding-bottom: 30px;
@@ -296,9 +323,11 @@ a.btn {
 }
 
 
+
 form {
   padding: $space*4 $space*3;
   background: $filter-black;
+  @include clearfix2;
   .field {
     padding: 0 0 $space-vertical;
     label {
