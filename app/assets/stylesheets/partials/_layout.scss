@@ -1,5 +1,6 @@
 body {font: normal normal 16px/145% 'Marvel', sans-serif}
-h1, h2, h3, h4, h5, h6, input, textarea, label{font-family: 'Marvel', sans-serif; font-weight: 400; color: white}
+h1, h2, h3, h4, h5, h6, input, textarea, label{font-family: 'Marvel', sans-serif; font-weight: 400}
+h1, h2, h3, h4, h5, h6 {color: white}
 p {color: white; text-align: justify}
 
 a {text-decoration: none}
@@ -297,7 +298,9 @@ h2.page-title, h3.user-title {
 }
 
 .admin-crud {
-  padding-bottom: 30px;
+  &.admin-head {
+    padding-bottom: 30px;
+  }
   .btn {
     @include button_black;
     &.create {}
@@ -328,6 +331,10 @@ form {
   padding: $space*4 $space*3;
   background: $filter-black;
   @include clearfix2;
+  @include inline-block;
+  min-width: 310px;
+
+  legend {color: white; font-size: 24px; padding-bottom: 20px}
   .field {
     padding: 0 0 $space-vertical;
     label {
@@ -335,6 +342,9 @@ form {
     }
 
     input, select {margin: 0}
+    body[id^="devise"] & input[type="email"],
+    body[id^="devise"] & input[type="password"] {width: 270px; padding: 5px 0}
+
   
     &.date-select {
       select {
@@ -349,4 +359,21 @@ form {
       @include button-green; @include button; text-shadow: none;
     }
   }
+
+  a {
+    color: $green;
+    &:hover {
+       color: $green; text-decoration: underline
+      }
+    &:visited {
+      color: $green;
+    }
+  }
 }
+
+#cerrar-form {
+  position: absolute; top: 15px; right: 15px;
+  width: 25px; height: 25px; background: white
+}
+
+#success-message {font-size: 24px; text-align: center; color: white; display: none}

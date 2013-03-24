@@ -1,3 +1,15 @@
+jQuery(function($) {
+
+    $('#new_contacto')
+      .on('ajax:success', function(event, xhr, status, error){
+        $(this).find('.field input, textarea').val(''); 
+        $('#success-message').fadeIn('slow');
+      })
+
+     
+});
+
+
 $(document).ready(function(){
   //  Initialize Backgound Stretcher	   
 	
@@ -29,6 +41,7 @@ $(document).ready(function(){
 
   show_contact_form();
 
+
 		
 });
 
@@ -41,6 +54,7 @@ function show_contact_form() {
   content = $('#content');
   button = $('#contact-us');
   button.removeAttr('href');
+  cerrar = $('#cerrar-form');
 
   form.css({'opacity': 0, 'display':'none'});
 
@@ -58,6 +72,9 @@ function show_contact_form() {
     }
   );
 
+  cerrar.click(function() {
+    button.trigger('click');
+  });
 
 }
 

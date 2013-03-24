@@ -1,4 +1,4 @@
-- if params[:controller] == 'contactos'
+- if params[:controller] == 'contactos1'
   = form_for @contacto do |f|
     -if @contacto.errors.any?
       #error_explanation
@@ -9,9 +9,10 @@
 
 
 - else
-  = form_for contacto do |f|
-    -if contacto.errors.any?
-      #error_explanation
+  = form_for contacto, :remote => true, :validate => true do |f|
+    
+    #error_explanation
+      -if contacto.errors.any?
         %h2= "#{pluralize(@contacto.errors.count, "error")} prohibited this contacto from being saved:"
         %ul
           - contacto.errors.full_messages.each do |msg|
@@ -34,3 +35,8 @@
       = f.text_area :comentario, :rows => 10, :placeholder => I18n.t('contacto.placeholder.comentario')
     .actions
       = f.submit I18n.t('send')
+      = image_tag('/images/images/preloader-3.gif')
+
+    #cerrar-form
+    #success-message
+      Mensaje enviado con éxito
