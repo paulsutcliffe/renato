@@ -45,16 +45,18 @@ function show_contact_form() {
   form.css({'opacity': 0, 'display':'none'});
 
 
-  button.stop().toggle(
+  button.toggle(
     function() {
       form.css('display', 'block');
-      form.stop().animate({'opacity':1}, 'slow');
-      content.stop().animate({'opacity': 0}, 'slow', function() {jQuery(this).css('display', 'none')});
+      content.css('display', 'block');
+      form.animate({'opacity':1}, 'slow');
+      content.animate({'opacity': 0}, 'slow');
     },
     function() {
-      content.css('display', 'block');
-      content.stop().animate({'opacity': 1}, 'slow');
-      form.stop().animate({'opacity':0}, 'slow', function() {jQuery(this).css('display', 'none')});
+      form.animate({'opacity':0}, 'slow');
+      content.animate({'opacity': 1}, 'slow')
+      form.css('display', 'none');
+      content.css('display', 'none');
     }
   );
 

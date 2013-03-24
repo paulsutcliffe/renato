@@ -7,7 +7,7 @@ body {
 }
 
 /* line 2, ../../app/assets/stylesheets/partials/_layout.scss */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, input, textarea, label {
   font-family: "Marvel", sans-serif;
   font-weight: 400;
   color: white;
@@ -57,6 +57,8 @@ Header
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  position: relative;
+  z-index: 50;
 }
 /* line 25, ../../app/assets/stylesheets/partials/_layout.scss */
 .one-third.column .inner {
@@ -93,7 +95,7 @@ h1#logo a b {
 header form#new_contacto {
   width: 400px;
   position: absolute;
-  bottom: 20px;
+  top: 135px;
   left: 110%;
 }
 /* line 50, ../../app/assets/stylesheets/partials/_layout.scss */
@@ -116,10 +118,12 @@ header form#new_contacto .field label, header form#new_contacto .actions label {
 header form#new_contacto .field textarea, header form#new_contacto .actions textarea {
   width: 100%;
   min-width: 100%;
+  min-height: 100px;
 }
 /* line 57, ../../app/assets/stylesheets/partials/_layout.scss */
 header form#new_contacto .actions input {
   float: right;
+  margin: 0;
 }
 
 /* line 62, ../../app/assets/stylesheets/partials/_layout.scss */
@@ -281,11 +285,13 @@ header form#new_contacto .actions input {
 #contact-info p a#contact-us {
   display: block;
   background: #8add00;
+  cursor: pointer;
   padding: 5px 15px;
   display: inline-block;
   *display: inline;
   *zoom: 1;
   font-size: 20px;
+  font-weight: normal;
   margin-bottom: 15px;
 }
 /* line 123, ../../app/assets/stylesheets/partials/_layout.scss */
@@ -403,6 +409,7 @@ h2.page-title, h3.user-title {
   *display: inline;
   *zoom: 1;
   font-size: 20px;
+  font-weight: normal;
   margin-bottom: 15px;
   background: url(../images/backgrounds/filter-black.png);
   font-size: 26px;
@@ -898,7 +905,7 @@ h2.page-title, h3.user-title {
   width: 100%;
   zoom: 1;
 }
-/* line 186, ../../app/assets/stylesheets/partials/_mixins.scss */
+/* line 187, ../../app/assets/stylesheets/partials/_mixins.scss */
 #bios .content:after {
   content: ".";
   display: block;
@@ -970,7 +977,7 @@ form {
   background: url(../images/backgrounds/filter-black.png);
   zoom: 1;
 }
-/* line 186, ../../app/assets/stylesheets/partials/_mixins.scss */
+/* line 187, ../../app/assets/stylesheets/partials/_mixins.scss */
 form:after {
   content: ".";
   display: block;
@@ -1012,8 +1019,16 @@ form .actions input[type="submit"] {
   border: 0;
   background: #8add00;
   color: black;
+  padding: 5px 15px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 15px;
+  text-shadow: none;
 }
-/* line 161, ../../app/assets/stylesheets/partials/_mixins.scss */
+/* line 162, ../../app/assets/stylesheets/partials/_mixins.scss */
 form .actions input[type="submit"]:hover {
   border: 0;
 }
