@@ -45,9 +45,10 @@ $(document).ready(function(){
 		
 });
 
+/*
 $(window).on('load resize orientationchange', function() {
   $('header.main .inner').height($(document).height());
-});
+}); */
 
 function show_contact_form() {
   form = $('header form');

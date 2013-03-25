@@ -4,8 +4,9 @@
   %h2.page-title
     = page_title! I18n.t('videos.index')
   #inner-top
-    .admin-crud.admin-head
-      = link_to 'Agregar Video', new_video_path, :class => 'btn create'
+    = render 'shared/share_social'
+  .admin-crud.admin-head
+    = link_to 'Agregar Video', new_video_path, :class => 'btn create'
 
   .content.gallery
     %ul

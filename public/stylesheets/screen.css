@@ -55,8 +55,13 @@ Header
 --------------------------------- 
 */
 /* line 22, ../../app/assets/stylesheets/partials/_layout.scss */
+.container {
+  background: repeat-y 0 0;
+  background-image: url(../images/backgrounds/filter-black-header-960.png);
+}
+
+/* line 23, ../../app/assets/stylesheets/partials/_layout.scss */
 .one-third.column {
-  background: url(../images/backgrounds/filter-black.png);
   -moz-transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -69,7 +74,7 @@ Header
   margin: 0;
   position: relative;
   min-height: 520px;
-  *height: auto !important;
+  height: auto !important;
   height: 520px;
 }
 
@@ -221,7 +226,7 @@ header form#new_contacto .actions input {
 #main-menu ul li#btn-videos a:hover span, #main-menu ul li#btn-videos b i {
   background-position: 0 -742px;
 }
-/* line 99, ../../app/assets/stylesheets/partials/_mixins.scss */
+/* line 101, ../../app/assets/stylesheets/partials/_mixins.scss */
 #main-menu ul li span, #main-menu ul li i {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -229,11 +234,11 @@ header form#new_contacto .actions input {
   display: block;
   padding-left: 40px;
 }
-/* line 106, ../../app/assets/stylesheets/partials/_mixins.scss */
+/* line 108, ../../app/assets/stylesheets/partials/_mixins.scss */
 #main-menu ul li b {
   background: url(../images/backgrounds/filter-white.png);
 }
-/* line 108, ../../app/assets/stylesheets/partials/_mixins.scss */
+/* line 110, ../../app/assets/stylesheets/partials/_mixins.scss */
 #main-menu ul li b i {
   color: #8add00;
 }
@@ -244,12 +249,12 @@ header form#new_contacto .actions input {
   font-size: 18px;
   display: block;
 }
-/* line 119, ../../app/assets/stylesheets/partials/_mixins.scss */
+/* line 121, ../../app/assets/stylesheets/partials/_mixins.scss */
 #main-menu ul li a:hover, #main-menu ul li b:hover {
   background: url(../images/backgrounds/filter-white.png);
   color: #8add00;
 }
-/* line 99, ../../app/assets/stylesheets/partials/_mixins.scss */
+/* line 101, ../../app/assets/stylesheets/partials/_mixins.scss */
 #main-menu ul li a span, #main-menu ul li a i, #main-menu ul li b span, #main-menu ul li b i {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -257,11 +262,11 @@ header form#new_contacto .actions input {
   display: block;
   padding-left: 40px;
 }
-/* line 106, ../../app/assets/stylesheets/partials/_mixins.scss */
+/* line 108, ../../app/assets/stylesheets/partials/_mixins.scss */
 #main-menu ul li a b, #main-menu ul li b b {
   background: url(../images/backgrounds/filter-white.png);
 }
-/* line 108, ../../app/assets/stylesheets/partials/_mixins.scss */
+/* line 110, ../../app/assets/stylesheets/partials/_mixins.scss */
 #main-menu ul li a b i, #main-menu ul li b b i {
   color: #8add00;
 }
@@ -306,12 +311,12 @@ header form#new_contacto .actions input {
   display: block;
   background: url(../images/backgrounds/icons.png) no-repeat;
 }
-/* line 119, ../../app/assets/stylesheets/partials/_mixins.scss */
+/* line 121, ../../app/assets/stylesheets/partials/_mixins.scss */
 #contact-info p span:hover {
   background: url(../images/backgrounds/filter-white.png);
   color: #8add00;
 }
-/* line 99, ../../app/assets/stylesheets/partials/_mixins.scss */
+/* line 101, ../../app/assets/stylesheets/partials/_mixins.scss */
 #contact-info p span span, #contact-info p span i {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -319,11 +324,11 @@ header form#new_contacto .actions input {
   display: block;
   padding-left: 40px;
 }
-/* line 106, ../../app/assets/stylesheets/partials/_mixins.scss */
+/* line 108, ../../app/assets/stylesheets/partials/_mixins.scss */
 #contact-info p span b {
   background: url(../images/backgrounds/filter-white.png);
 }
-/* line 108, ../../app/assets/stylesheets/partials/_mixins.scss */
+/* line 110, ../../app/assets/stylesheets/partials/_mixins.scss */
 #contact-info p span b i {
   color: #8add00;
 }
@@ -379,12 +384,12 @@ header form#new_contacto .actions input {
   font-size: 18px;
   display: block;
 }
-/* line 119, ../../app/assets/stylesheets/partials/_mixins.scss */
+/* line 121, ../../app/assets/stylesheets/partials/_mixins.scss */
 .shared-social ul li a:hover {
   background: url(../images/backgrounds/filter-white.png);
   color: #8add00;
 }
-/* line 99, ../../app/assets/stylesheets/partials/_mixins.scss */
+/* line 101, ../../app/assets/stylesheets/partials/_mixins.scss */
 .shared-social ul li a span, .shared-social ul li a i {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -392,11 +397,11 @@ header form#new_contacto .actions input {
   display: block;
   padding-left: 40px;
 }
-/* line 106, ../../app/assets/stylesheets/partials/_mixins.scss */
+/* line 108, ../../app/assets/stylesheets/partials/_mixins.scss */
 .shared-social ul li a b {
   background: url(../images/backgrounds/filter-white.png);
 }
-/* line 108, ../../app/assets/stylesheets/partials/_mixins.scss */
+/* line 110, ../../app/assets/stylesheets/partials/_mixins.scss */
 .shared-social ul li a b i {
   color: #8add00;
 }
@@ -417,18 +422,26 @@ h2.page-title, h3.user-title {
   margin-bottom: 15px;
   background: url(../images/backgrounds/filter-black.png);
   font-size: 26px;
+  vertical-align: top;
 }
 
-/* line 172, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 173, ../../app/assets/stylesheets/partials/_layout.scss */
 #content #inner-top {
   padding-bottom: 20px;
 }
+/* line 175, ../../app/assets/stylesheets/partials/_layout.scss */
+#videos #content #inner-top {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+}
 
-/* line 181, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 186, ../../app/assets/stylesheets/partials/_layout.scss */
 .gallery ul {
   zoom: 1;
 }
-/* line 187, ../../app/assets/stylesheets/partials/_mixins.scss */
+/* line 189, ../../app/assets/stylesheets/partials/_mixins.scss */
 .gallery ul:after {
   content: ".";
   display: block;
@@ -437,57 +450,57 @@ h2.page-title, h3.user-title {
   line-height: 0;
   height: 0;
 }
-/* line 183, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 188, ../../app/assets/stylesheets/partials/_layout.scss */
 .gallery ul li {
   margin: 0 10px 15px 0;
   float: left;
   width: 180px;
 }
-/* line 186, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 191, ../../app/assets/stylesheets/partials/_layout.scss */
 .gallery ul li a {
   width: 180px;
   float: left;
 }
-/* line 189, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 194, ../../app/assets/stylesheets/partials/_layout.scss */
 .gallery ul li a.caption {
   background: url(../images/backgrounds/filter-black.png);
   color: white;
   text-align: center;
   padding: 2px 0;
 }
-/* line 193, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 198, ../../app/assets/stylesheets/partials/_layout.scss */
 .gallery ul li iframe {
   width: 100%;
 }
-/* line 197, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 202, ../../app/assets/stylesheets/partials/_layout.scss */
 #videos .gallery ul li {
   width: 290px;
 }
-/* line 199, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 204, ../../app/assets/stylesheets/partials/_layout.scss */
 #videos .gallery ul li p {
   margin: 0;
 }
-/* line 201, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 206, ../../app/assets/stylesheets/partials/_layout.scss */
 #videos .gallery ul li p iframe {
   vertical-align: top;
 }
 
-/* line 208, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 213, ../../app/assets/stylesheets/partials/_layout.scss */
 .pagination {
   float: left;
   clear: left;
   width: 100%;
   text-align: right;
 }
-/* line 219, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 224, ../../app/assets/stylesheets/partials/_layout.scss */
 .pagination a:hover {
   color: #8add00;
 }
-/* line 224, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 229, ../../app/assets/stylesheets/partials/_layout.scss */
 .pagination em.current {
   color: #8add00;
 }
-/* line 226, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 231, ../../app/assets/stylesheets/partials/_layout.scss */
 .pagination span, .pagination a, .pagination em {
   background: url(../images/backgrounds/filter-black.png);
   display: inline-block;
@@ -503,34 +516,36 @@ h2.page-title, h3.user-title {
   /* line 2, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container {
     width: 100%;
+    background: none;
   }
-  /* line 14, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 15, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container header.main.one-third.column {
     height: 90px !important;
     width: 100%;
+    background: url(../images/backgrounds/filter-black.png);
   }
-  /* line 17, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 19, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container header.main.one-third.column .inner {
     height: 90px !important;
     padding: 5px 0 0 !important;
     min-height: 90px;
-    *height: auto !important;
+    height: auto !important;
     height: 90px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
   }
-  /* line 23, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 25, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .two-thirds.column {
     width: 100%;
   }
-  /* line 5, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 6, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #menu-button {
     display: block;
     cursor: pointer;
   }
-  /* line 29, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 31, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #main-menu {
     display: none;
     position: absolute;
@@ -539,11 +554,11 @@ h2.page-title, h3.user-title {
     background: url(../images/backgrounds/filter-black-darker.png);
     width: 80%;
   }
-  /* line 31, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 33, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #main-menu.menu-open {
     display: block;
   }
-  /* line 34, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 36, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #main-menu ul {
     padding: 5%;
     margin: 0;
@@ -552,64 +567,64 @@ h2.page-title, h3.user-title {
     -o-box-sizing: border-box;
     box-sizing: border-box;
   }
-  /* line 37, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 39, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #main-menu ul li {
     border-bottom: 1px solid #444444;
     background: url(../images/backgrounds/symbols.png) no-repeat 100% 10px;
   }
-  /* line 136, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 138, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #main-menu ul li li {
     background-position: 100% -167px;
   }
-  /* line 41, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 43, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #main-menu ul ul {
     padding: 0;
   }
-  /* line 44, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 46, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #main-menu ul ul li:nth-last-child(1) {
     border-bottom: 0;
   }
-  /* line 53, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 55, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow {
     position: absolute;
     top: 5px;
     right: 200px;
   }
-  /* line 55, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 57, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow p {
     margin: 0;
   }
-  /* line 58, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 60, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow ul {
     margin: 5px 0 0 40px;
   }
-  /* line 61, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 63, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow ul li a {
     padding: 0;
   }
-  /* line 63, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 65, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow ul li a span {
     padding-top: 3px !important;
     padding-bottom: 3px !important;
     padding-left: 25px;
   }
-  /* line 70, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 72, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow ul li.btn-facebook span {
     background-position: -10px -798px !important;
   }
-  /* line 73, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 75, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow ul li.btn-facebook a:hover span {
     background-position: -10px -846px !important;
   }
-  /* line 78, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 80, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow ul li.btn-twitter span {
     background-position: -10px -904px !important;
   }
-  /* line 81, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 83, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow ul li.btn-twitter a:hover span {
     background-position: -10px -952px !important;
   }
-  /* line 90, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 92, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #contact-info {
     position: absolute;
     bottom: auto;
@@ -619,7 +634,7 @@ h2.page-title, h3.user-title {
     margin: 0;
     padding-top: 30px;
   }
-  /* line 92, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 94, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #contact-info #contact-us {
     margin-bottom: 0;
     display: none;
@@ -629,34 +644,36 @@ h2.page-title, h3.user-title {
   /* line 2, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container {
     width: 100%;
+    background: none;
   }
-  /* line 14, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 15, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container header.main.one-third.column {
     height: 90px !important;
     width: 100%;
+    background: url(../images/backgrounds/filter-black.png);
   }
-  /* line 17, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 19, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container header.main.one-third.column .inner {
     height: 90px !important;
     padding: 5px 0 0 !important;
     min-height: 90px;
-    *height: auto !important;
+    height: auto !important;
     height: 90px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
   }
-  /* line 23, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 25, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .two-thirds.column {
     width: 100%;
   }
-  /* line 5, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 6, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #menu-button {
     display: block;
     cursor: pointer;
   }
-  /* line 29, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 31, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #main-menu {
     display: none;
     position: absolute;
@@ -665,11 +682,11 @@ h2.page-title, h3.user-title {
     background: url(../images/backgrounds/filter-black-darker.png);
     width: 80%;
   }
-  /* line 31, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 33, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #main-menu.menu-open {
     display: block;
   }
-  /* line 34, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 36, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #main-menu ul {
     padding: 5%;
     margin: 0;
@@ -678,64 +695,64 @@ h2.page-title, h3.user-title {
     -o-box-sizing: border-box;
     box-sizing: border-box;
   }
-  /* line 37, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 39, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #main-menu ul li {
     border-bottom: 1px solid #444444;
     background: url(../images/backgrounds/symbols.png) no-repeat 100% 10px;
   }
-  /* line 136, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 138, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #main-menu ul li li {
     background-position: 100% -167px;
   }
-  /* line 41, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 43, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #main-menu ul ul {
     padding: 0;
   }
-  /* line 44, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 46, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #main-menu ul ul li:nth-last-child(1) {
     border-bottom: 0;
   }
-  /* line 53, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 55, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow {
     position: absolute;
     top: 5px;
     right: 200px;
   }
-  /* line 55, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 57, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow p {
     margin: 0;
   }
-  /* line 58, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 60, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow ul {
     margin: 5px 0 0 40px;
   }
-  /* line 61, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 63, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow ul li a {
     padding: 0;
   }
-  /* line 63, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 65, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow ul li a span {
     padding-top: 3px !important;
     padding-bottom: 3px !important;
     padding-left: 25px;
   }
-  /* line 70, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 72, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow ul li.btn-facebook span {
     background-position: -10px -798px !important;
   }
-  /* line 73, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 75, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow ul li.btn-facebook a:hover span {
     background-position: -10px -846px !important;
   }
-  /* line 78, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 80, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow ul li.btn-twitter span {
     background-position: -10px -904px !important;
   }
-  /* line 81, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 83, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow ul li.btn-twitter a:hover span {
     background-position: -10px -952px !important;
   }
-  /* line 90, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 92, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #contact-info {
     position: absolute;
     bottom: auto;
@@ -745,7 +762,7 @@ h2.page-title, h3.user-title {
     margin: 0;
     padding-top: 30px;
   }
-  /* line 92, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 94, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #contact-info #contact-us {
     margin-bottom: 0;
     display: none;
@@ -755,34 +772,36 @@ h2.page-title, h3.user-title {
   /* line 2, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container {
     width: 100%;
+    background: none;
   }
-  /* line 14, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 15, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container header.main.one-third.column {
     height: 90px !important;
     width: 100%;
+    background: url(../images/backgrounds/filter-black.png);
   }
-  /* line 17, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 19, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container header.main.one-third.column .inner {
     height: 90px !important;
     padding: 5px 0 0 !important;
     min-height: 90px;
-    *height: auto !important;
+    height: auto !important;
     height: 90px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
   }
-  /* line 23, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 25, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .two-thirds.column {
     width: 100%;
   }
-  /* line 5, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 6, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #menu-button {
     display: block;
     cursor: pointer;
   }
-  /* line 29, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 31, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #main-menu {
     display: none;
     position: absolute;
@@ -791,11 +810,11 @@ h2.page-title, h3.user-title {
     background: url(../images/backgrounds/filter-black-darker.png);
     width: 80%;
   }
-  /* line 31, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 33, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #main-menu.menu-open {
     display: block;
   }
-  /* line 34, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 36, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #main-menu ul {
     padding: 5%;
     margin: 0;
@@ -804,64 +823,64 @@ h2.page-title, h3.user-title {
     -o-box-sizing: border-box;
     box-sizing: border-box;
   }
-  /* line 37, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 39, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #main-menu ul li {
     border-bottom: 1px solid #444444;
     background: url(../images/backgrounds/symbols.png) no-repeat 100% 10px;
   }
-  /* line 136, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 138, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #main-menu ul li li {
     background-position: 100% -167px;
   }
-  /* line 41, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 43, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #main-menu ul ul {
     padding: 0;
   }
-  /* line 44, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 46, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #main-menu ul ul li:nth-last-child(1) {
     border-bottom: 0;
   }
-  /* line 53, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 55, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow {
     position: absolute;
     top: 5px;
     right: 200px;
   }
-  /* line 55, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 57, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow p {
     margin: 0;
   }
-  /* line 58, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 60, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow ul {
     margin: 5px 0 0 40px;
   }
-  /* line 61, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 63, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow ul li a {
     padding: 0;
   }
-  /* line 63, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 65, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow ul li a span {
     padding-top: 3px !important;
     padding-bottom: 3px !important;
     padding-left: 25px;
   }
-  /* line 70, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 72, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow ul li.btn-facebook span {
     background-position: -10px -798px !important;
   }
-  /* line 73, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 75, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow ul li.btn-facebook a:hover span {
     background-position: -10px -846px !important;
   }
-  /* line 78, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 80, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow ul li.btn-twitter span {
     background-position: -10px -904px !important;
   }
-  /* line 81, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 83, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container .shared-social.follow ul li.btn-twitter a:hover span {
     background-position: -10px -952px !important;
   }
-  /* line 90, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 92, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #contact-info {
     position: absolute;
     bottom: auto;
@@ -871,13 +890,13 @@ h2.page-title, h3.user-title {
     margin: 0;
     padding-top: 30px;
   }
-  /* line 92, ../../app/assets/stylesheets/partials/_mixins.scss */
+  /* line 94, ../../app/assets/stylesheets/partials/_mixins.scss */
   .container #contact-info #contact-us {
     margin-bottom: 0;
     display: none;
   }
 }
-/* line 251, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 256, ../../app/assets/stylesheets/partials/_layout.scss */
 #carousel, #carousel ul, #carousel li {
   min-height: 100%;
   height: 100%;
@@ -886,7 +905,7 @@ h2.page-title, h3.user-title {
   position: relative;
 }
 
-/* line 261, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 266, ../../app/assets/stylesheets/partials/_layout.scss */
 #carousel {
   overflow: hidden;
   width: 100%;
@@ -896,7 +915,7 @@ h2.page-title, h3.user-title {
   -webkit-transform-style: preserve-3d;
 }
 
-/* line 270, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 275, ../../app/assets/stylesheets/partials/_layout.scss */
 #carousel ul.animate {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -904,7 +923,7 @@ h2.page-title, h3.user-title {
   transition: all 0.3s;
 }
 
-/* line 277, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 282, ../../app/assets/stylesheets/partials/_layout.scss */
 #carousel ul {
   transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
   -o-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
@@ -916,13 +935,13 @@ h2.page-title, h3.user-title {
   -webkit-transform-style: preserve-3d;
 }
 
-/* line 288, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 293, ../../app/assets/stylesheets/partials/_layout.scss */
 #carousel ul {
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   position: relative;
 }
 
-/* line 293, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 298, ../../app/assets/stylesheets/partials/_layout.scss */
 #carousel li {
   float: left;
   overflow: hidden;
@@ -930,7 +949,7 @@ h2.page-title, h3.user-title {
   -webkit-transform: translate3d(0, 0, 0);
 }
 
-/* line 303, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 308, ../../app/assets/stylesheets/partials/_layout.scss */
 .box {
   width: 280px;
   background: url(../images/backgrounds/filter-black.png);
@@ -938,12 +957,12 @@ h2.page-title, h3.user-title {
   float: left;
 }
 
-/* line 308, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 313, ../../app/assets/stylesheets/partials/_layout.scss */
 #bios .content {
   width: 100%;
   zoom: 1;
 }
-/* line 187, ../../app/assets/stylesheets/partials/_mixins.scss */
+/* line 189, ../../app/assets/stylesheets/partials/_mixins.scss */
 #bios .content:after {
   content: ".";
   display: block;
@@ -952,17 +971,17 @@ h2.page-title, h3.user-title {
   line-height: 0;
   height: 0;
 }
-/* line 310, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 315, ../../app/assets/stylesheets/partials/_layout.scss */
 #bios .content figure {
   float: left;
   padding-left: 10px;
 }
 
-/* line 315, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 320, ../../app/assets/stylesheets/partials/_layout.scss */
 .admin-crud.admin-head {
   padding-bottom: 30px;
 }
-/* line 318, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 323, ../../app/assets/stylesheets/partials/_layout.scss */
 .admin-crud .btn {
   background: url(../images/backgrounds/filter-black.png);
   padding: 5px 10px;
@@ -971,32 +990,32 @@ h2.page-title, h3.user-title {
   color: white;
   border: 0;
 }
-/* line 323, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 328, ../../app/assets/stylesheets/partials/_layout.scss */
 .btn.back + .admin-crud.admin-head {
   display: inline-block;
   *display: inline;
   *zoom: 1;
 }
-/* line 326, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 331, ../../app/assets/stylesheets/partials/_layout.scss */
 .admin-crud.admin-iterate {
   background: url(../images/backgrounds/filter-black.png);
   margin-top: 2px;
   float: left;
   width: 100%;
 }
-/* line 329, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 334, ../../app/assets/stylesheets/partials/_layout.scss */
 .admin-crud.admin-iterate a {
   color: white;
   float: left;
   width: auto;
   padding: 2px;
 }
-/* line 331, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 336, ../../app/assets/stylesheets/partials/_layout.scss */
 .admin-crud.admin-iterate a + a {
   float: right;
 }
 
-/* line 336, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 341, ../../app/assets/stylesheets/partials/_layout.scss */
 a.btn {
   background: url(../images/backgrounds/filter-black.png);
   padding: 5px 10px;
@@ -1009,7 +1028,7 @@ a.btn {
   *zoom: 1;
 }
 
-/* line 344, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 349, ../../app/assets/stylesheets/partials/_layout.scss */
 form {
   padding: 20px 15px;
   background: url(../images/backgrounds/filter-black.png);
@@ -1019,7 +1038,7 @@ form {
   *zoom: 1;
   min-width: 310px;
 }
-/* line 187, ../../app/assets/stylesheets/partials/_mixins.scss */
+/* line 189, ../../app/assets/stylesheets/partials/_mixins.scss */
 form:after {
   content: ".";
   display: block;
@@ -1028,45 +1047,45 @@ form:after {
   line-height: 0;
   height: 0;
 }
-/* line 351, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 356, ../../app/assets/stylesheets/partials/_layout.scss */
 form legend {
   color: white;
   font-size: 24px;
   padding-bottom: 20px;
 }
-/* line 352, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 357, ../../app/assets/stylesheets/partials/_layout.scss */
 form .field {
   padding: 0 0 15px;
 }
-/* line 354, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 359, ../../app/assets/stylesheets/partials/_layout.scss */
 form .field label {
   color: white;
   font-size: 18px;
   display: block;
 }
-/* line 359, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 364, ../../app/assets/stylesheets/partials/_layout.scss */
 form .field input, form .field select {
   margin: 0;
 }
-/* line 362, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 367, ../../app/assets/stylesheets/partials/_layout.scss */
 body[id^="devise"] form .field input[type="email"], body[id^="devise"] form .field input[type="password"],
 form .field input[type="text"] {
   width: 270px;
   padding: 5px 0;
   font-size: 18px;
 }
-/* line 367, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 372, ../../app/assets/stylesheets/partials/_layout.scss */
 form .field.date-select select {
   display: inline-block;
   *display: inline;
   *zoom: 1;
   width: 100px;
 }
-/* line 373, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 378, ../../app/assets/stylesheets/partials/_layout.scss */
 form .actions {
   padding-top: 10px;
 }
-/* line 375, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 380, ../../app/assets/stylesheets/partials/_layout.scss */
 form .actions input[type="submit"] {
   padding: 5px 10px;
   color: white;
@@ -1084,38 +1103,38 @@ form .actions input[type="submit"] {
   margin-bottom: 15px;
   text-shadow: none;
 }
-/* line 162, ../../app/assets/stylesheets/partials/_mixins.scss */
+/* line 164, ../../app/assets/stylesheets/partials/_mixins.scss */
 form .actions input[type="submit"]:hover {
   border: 0;
 }
-/* line 380, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 385, ../../app/assets/stylesheets/partials/_layout.scss */
 form a {
   color: #8add00;
 }
-/* line 382, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 387, ../../app/assets/stylesheets/partials/_layout.scss */
 form a:hover {
   color: #8add00;
   text-decoration: underline;
 }
-/* line 385, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 390, ../../app/assets/stylesheets/partials/_layout.scss */
 form a:visited {
   color: #8add00;
 }
-/* line 390, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 395, ../../app/assets/stylesheets/partials/_layout.scss */
 form #error_explanation {
   color: red;
 }
-/* line 394, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 399, ../../app/assets/stylesheets/partials/_layout.scss */
 form .field_with_errors label.message {
   color: red;
   padding-left: 10px;
 }
-/* line 397, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 402, ../../app/assets/stylesheets/partials/_layout.scss */
 form .field_with_errors + br {
   display: none;
 }
 
-/* line 401, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 406, ../../app/assets/stylesheets/partials/_layout.scss */
 #cerrar-form {
   position: absolute;
   top: 15px;
@@ -1125,7 +1144,7 @@ form .field_with_errors + br {
   background: white;
 }
 
-/* line 406, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 411, ../../app/assets/stylesheets/partials/_layout.scss */
 #success-message {
   font-size: 24px;
   text-align: center;
