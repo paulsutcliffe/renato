@@ -8,6 +8,6 @@
 
   .field
     = f.label :link
-    = f.text_field :link
+    = f.text_field :link, :placeholder => 'Insertar url de youtube (Ej: https://www.youtube.com/watch?v=h5soY0WTLzU)'
   .actions
-    = f.submit 'Save'
+    = f.submit I18n.t('save') 

@@ -1,12 +1,12 @@
 %article#content
   %h2.page-title
-    Biografía
+    = page_title! I18n.t('bios.index')
  
   .admin-crud.admin-head
     - if !@bio
-      = link_to I18n.t('bio.index'), new_bio_path, :class => 'btn create'
+      = link_to I18n.t('bio.new'), new_bio_path, :class => 'btn create'
     - else
-      = link_to I18n.t('bio.index.edit'), edit_bio_path(@bio), :class => 'btn create' 
+      = link_to I18n.t('bio.edit'), edit_bio_path(@bio), :class => 'btn create' 
 
   - if @bio
     .content

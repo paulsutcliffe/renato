@@ -1,13 +1,13 @@
 #content
   %h2.page-title
-    Retratos
+    = page_title! I18n.t('albumes.index')
 
   - if current_cliente
     %h3.user-title
       = current_cliente.nombre
   
   .admin-crud.admin-head
-    = link_to 'New Album', new_album_path, :class => 'btn create'
+    = link_to I18n.t('album.new'), new_album_path, :class => 'btn create'
 
   #carousel1.content.gallery
     %ul
@@ -17,8 +17,8 @@
             = link_to image_tag(album.fotos.first.foto_picture(:index)), album, :title => fotos_size(album.fotos) + ultima_foto(album.fotos)
           = link_to album.nombre, album, :class => 'caption'
           .admin-crud.admin-iterate
-            = link_to 'Edit', edit_album_path(album)
-            = link_to 'Destroy', album, :confirm => 'Are you sure?', :method => :delete
+            = link_to I18n.t('edit'), edit_album_path(album)
+            = link_to I18n.t('destroy'), album, :confirm => 'Are you sure?', :method => :delete
 
   = will_paginate @albumes
 

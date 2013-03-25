@@ -170,7 +170,7 @@ h2.page-title, h3.user-title {
 
 #content {
   #inner-top {
-     
+    padding-bottom: 20px;  
   }
 } 
 
@@ -178,16 +178,30 @@ h2.page-title, h3.user-title {
 
 
 .gallery {
-  li {
-    margin: 0 $space*2 $space*3 0;
-    float: left; width: 180px;
-    a {
-      width: 180px; 
-      float: left;
-      &.caption {
-        background: $filter-black; color: white; text-align: center; padding: 2px 0;
+  ul {
+    @include clearfix2;
+    li {
+      margin: 0 $space*2 $space*3 0;
+      float: left; width: 180px;
+      a {
+        width: 180px; 
+        float: left;
+        &.caption {
+          background: $filter-black; color: white; text-align: center; padding: 2px 0;
+        }
       }
+      iframe {width: 100%}
     }
+  }
+
+  #videos & ul li {
+        width: 290px;
+    p {
+      margin: 0;
+      iframe {
+        vertical-align: top;
+      }
+    }   
   }
 }
 
@@ -338,14 +352,17 @@ form {
   .field {
     padding: 0 0 $space-vertical;
     label {
-      color: white; font-size: 16px
+      color: white; font-size: 18px;
+      display: block;
     }
 
     input, select {margin: 0}
     body[id^="devise"] & input[type="email"],
-    body[id^="devise"] & input[type="password"] {width: 270px; padding: 5px 0}
+    body[id^="devise"] & input[type="password"],
+    input[type="text"] {width: 270px; padding: 5px 0; font-size: 18px}
 
   
+
     &.date-select {
       select {
         @include inline-block; width: 100px;
@@ -368,6 +385,16 @@ form {
     &:visited {
       color: $green;
     }
+  }
+  // errors
+  #error_explanation {
+    color: red;
+  }
+  .field_with_errors {
+    label.message {
+      color: red; padding-left: 10px
+    }
+    & + br {display: none}
   }
 }
 

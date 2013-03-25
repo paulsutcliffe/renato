@@ -7,11 +7,9 @@
       %legend Ingresa a tu cuenta
       .field 
         = f.label :email
-        %br
         = f.email_field :email
       .field
         = f.label :password
-        %br
         = f.password_field :password
       - if devise_mapping.rememberable?
         .field

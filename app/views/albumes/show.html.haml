@@ -8,7 +8,7 @@
 
 #content
   %h2.page-title
-    = @album.nombre
+    = page_title! @album.nombre
 
   - if current_cliente
     %h3.user-title
@@ -16,7 +16,7 @@
   #inner-top
     = link_to I18n.t('album.back'), albumes_path, :class => 'btn back'
     .admin-crud.admin-head
-      = link_to 'Subir Foto', new_album_foto_path(@album), :class => 'btn create'
+      = link_to I18n.t('foto.new'), new_album_foto_path(@album), :class => 'btn create'
 
   #carousel1.content.gallery
     %ul

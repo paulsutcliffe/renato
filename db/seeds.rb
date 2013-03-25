@@ -34,4 +34,8 @@ Cliente.create!(:nombre => 'pablo', :apellido => 'sinclaire', :email => 'pablo@t
 Information.delete_all
 Information.create!(:telefono => '9986521463', :email => 'renato@ghilardi.com', :facebook => 'http://www.google.com', :twitter => 'http://www.google.com')
 
+Video.delete_all
+1.upto(10) do |i|
+  Video.create!(:link => 'https://www.youtube.com/watch?v=h5soY0WTLzU')
+end
 

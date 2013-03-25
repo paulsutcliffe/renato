@@ -2,18 +2,23 @@ es:
   cancel: Cancelar
   save: Guardar 
   send: Enviar
+  edit: Editar
+  destroy: Eliminar
 
   albumes:
     index: Albumes
   album:
     back: Volver a los Álbumes
     new: Crear Álbum
+    edit: Editar Álbum
     placeholder:
       nombre: 'Ej: Pedro Flores'
 
-  bio:
-    index:
-      edit: Editar Biografía
+  bios:
+    index: Biografía
+  bio:   
+    new: Crear Biografía
+    edit: Editar Biografía
 
   contacto:
     placeholder:
@@ -22,6 +27,18 @@ es:
       email: 'Ej: miguel@gmail.com'
       telefono: 'Número fijo o celular'
       comentario: 'Su comentario'
+
+  fotos:
+    index: Fotos
+  foto:
+    new: Subir Foto
+    edit: Editar Foto
+
+  videos:
+    index: Videos
+  video:
+    edit: Editar Video
+    new: Adjuntar Video
 
   will_paginate:
     previous_label: "&#8592; Anterior"

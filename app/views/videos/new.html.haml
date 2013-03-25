@@ -1,5 +1,10 @@
-%h1 New video
+#content
+  %h2.page-title
+    = page_title! I18n.t('video.new')
 
-= render 'form'
+  #inner-top
+    = link_to I18n.t('cancel'), videos_path, :class => 'btn back'
 
-= link_to 'Back', videos_path
+  .content
+    = render 'form'
+
