@@ -1,0 +1,21 @@
+%h1 Listing fondo_secciones
+
+%table
+  %tr
+    %th Title
+    %th Slug
+    %th
+    %th
+    %th
+
+  - @fondo_secciones.each do |fondo_seccion|
+    %tr
+      %td= fondo_seccion.title
+      %td= fondo_seccion.slug
+      %td= link_to 'Show', fondo_seccion
+      %td= link_to 'Edit', edit_fondo_seccion_path(fondo_seccion)
+      %td= link_to 'Destroy', fondo_seccion, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Fondo seccion', new_fondo_seccion_path

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130323200336) do
+ActiveRecord::Schema.define(:version => 20130326032719) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20130323200336) do
   end
 
   create_table "backgrounds", :force => true do |t|
+    t.integer  "fondo_seccion_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "background_picture_file_name"
@@ -95,6 +96,13 @@ ActiveRecord::Schema.define(:version => 20130323200336) do
     t.string   "email"
     t.string   "telefono"
     t.text     "comentario"
+    t.string   "slug"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "fondo_secciones", :force => true do |t|
+    t.string   "title"
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"

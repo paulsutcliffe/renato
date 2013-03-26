@@ -25,7 +25,13 @@ class ApplicationController < ActionController::Base
   
     @bodyclass = @action + ' ' + @front + ' ' + @admin
   end
- 
+
+  def backgrounds
+    @fondo_seccion = FondoSeccion.find(params[:id])
+    @backgrounds = @fondo_seccion.backgrounds.all
+  end
+
+  helper_method :backgrounds
   helper_method :bodyid
   helper_method :bodyclass
 end

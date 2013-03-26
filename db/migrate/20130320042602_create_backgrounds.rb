@@ -1,6 +1,7 @@
 class CreateBackgrounds < ActiveRecord::Migration
   def self.up
     create_table :backgrounds do |t|
+      t.integer :fondo_seccion_id
 
       t.timestamps
     end

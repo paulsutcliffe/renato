@@ -16,10 +16,10 @@ end
 Bio.delete_all
 Bio.create!(:biografia => long_text, :bio_picture => File.open(File.join(Rails.root, '/features/support/images/img-renato.jpg')))
 
-Background.delete_all
-1.upto(6) do |i|
-  Background.create!(:background_picture => File.open(File.join(Rails.root, '/features/support/backgrounds/sample-' + "#{i}" +'.jpg')))
-end
+#Background.delete_all
+#1.upto(6) do |i|
+#  Background.create!(:background_picture => File.open(File.join(Rails.root, '/features/support/backgrounds/sample-' + "#{i}" +'.jpg')))
+#end
 
 Categoria.delete_all
 categoria = Categoria.create!(:nombre => 'Matrimonio')
@@ -31,6 +31,22 @@ Cliente.delete_all
 Cliente.create!(:nombre => 'pedro', :apellido => 'sinclaire', :email => 'pedro@test.com', :password => '1234567')
 Cliente.create!(:nombre => 'pablo', :apellido => 'sinclaire', :email => 'pablo@test.com', :password => '1234567')
 
+
+################ START FondoSeccion has_many Backgrounds ################ 
+# 1) Create multiple FondoSeccion
+ FondoSeccion.delete_all
+ secciones = ['Inicio', 'Portafolio', 'Matrimonio', 'Niños', 'Moda', 'Bio', 'Descarga', 'Videos', 'Cliente'].each do |i|
+   FondoSeccion.create!(:title => i)
+ end
+
+# 2) Find by the title and then add a background six times
+1.upto(6) do |i|
+  secciones.each do |b|
+    FondoSeccion.find_by_title(b).backgrounds.create!(:background_picture => File.open(File.join(Rails.root, '/features/support/backgrounds/sample-' + "#{i}" +'.jpg'))) 
+  end
+end
+################ END FondoSeccion has_many Backgrounds ################ 
+
 Information.delete_all
 Information.create!(:telefono => '9986521463', :email => 'renato@ghilardi.com', :facebook => 'http://www.google.com', :twitter => 'http://www.google.com')
 
@@ -39,3 +55,7 @@ Video.delete_all
   Video.create!(:link => 'https://www.youtube.com/watch?v=h5soY0WTLzU')
 end
 
+
+# http://stackoverflow.com/questions/5149128/rails-3-multiple-has-one-associations-seeding
+# http://stackoverflow.com/questions/904455/in-ruby-on-rails-what-is-the-kensure-and-kend-in-error-messages
+# http://stackoverflow.com/questions/14353148/how-to-loop-rails-variable

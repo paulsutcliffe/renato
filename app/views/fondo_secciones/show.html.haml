@@ -1,0 +1,18 @@
+= link_to 'Subir Fondo', new_fondo_seccion_background_path(@fondo_seccion)
+
+%div
+  - @backgrounds.each do |background|
+    = image_tag background.background_picture(:index)
+
+%p#notice= notice
+
+%p
+  %b Title:
+  = @fondo_seccion.title
+%p
+  %b Slug:
+  = @fondo_seccion.slug
+
+= link_to 'Edit', edit_fondo_seccion_path(@fondo_seccion)
+\|
+= link_to 'Back', fondo_secciones_path

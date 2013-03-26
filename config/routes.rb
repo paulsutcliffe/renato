@@ -1,10 +1,11 @@
 Renato::Application.routes.draw do
 
+
+
   resources :bios
 
   resources :information
 
-  resources :backgrounds
 
   get "home/index"
 
@@ -16,13 +17,19 @@ Renato::Application.routes.draw do
   resources :videos
   resources :fotos
 
+
+  # associations
   resources :categorias do
     resources :fotos
   end
 
-    resources :albumes do
-      resources :fotos
-    end
+  resources :albumes do
+    resources :fotos
+  end
+
+  resources :fondo_secciones do
+    resources :backgrounds
+  end
 
 
 

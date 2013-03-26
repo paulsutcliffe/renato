@@ -6,5 +6,6 @@
   # inflect.plural /^(ox)$/i, '\1en'
   # inflect.singular /^(ox)en/i, '\1'
    inflect.irregular 'album', 'albumes'
+   inflect.irregular 'fondo_seccion', 'fondo_secciones'
   # inflect.uncountable %w( fish sheep )
  end
