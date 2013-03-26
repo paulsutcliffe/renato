@@ -34,4 +34,7 @@ class ApplicationController < ActionController::Base
   helper_method :backgrounds
   helper_method :bodyid
   helper_method :bodyclass
+
+  # controller_name
+  # action_name
 end
