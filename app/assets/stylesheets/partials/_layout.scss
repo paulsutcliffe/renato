@@ -13,10 +13,10 @@ ul ul, ul ol, ol ol, ol ul {margin: 0}
 
 .inner {margin: 0 10px; padding: $space-vertical 0}
 
-/* 
+/*
 ---------------------------------
 Header
---------------------------------- 
+---------------------------------
 */
 
 .container {background: repeat-y 0 0; background-image: $filter-black-header-960}
@@ -60,7 +60,7 @@ header {
   }
 }
 
-#menu-button {display: none; color: white; text-transform: uppercase; 
+#menu-button {display: none; color: white; text-transform: uppercase;
 padding-left: 30px; line-height: 80%; font-size: 20px;
 float: left;  width: 23px; height: 18px; background: $menu-icon; margin: 0;
 position: absolute; top: 50px; left: 320px;}
@@ -96,7 +96,7 @@ position: absolute; top: 50px; left: 320px;}
       margin: 0;
       @include menu-span-icons;
       a, b {
-        @include menu-anchors; 
+        @include menu-anchors;
       }
       ul {
         li {
@@ -111,7 +111,7 @@ position: absolute; top: 50px; left: 320px;}
 
 
 #contact-info {
-  /* position: absolute;*/ bottom: 40px; left: 0; 
+  /* position: absolute;*/ bottom: 40px; left: 0;
   -moz-transition: all 0.3s ease-out; -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out; transition: all 0.3s ease-out;
   margin-left: $space *8;
@@ -122,7 +122,7 @@ position: absolute; top: 50px; left: 320px;}
       @include button;
     }
     span {
-      @include menu-anchors; 
+      @include menu-anchors;
       background: $icons;
       &.phone {background-position: -10px -999px}
       &.phone:hover {background: $icons; background-position: -10px -1047px}
@@ -146,7 +146,7 @@ position: absolute; top: 50px; left: 320px;}
       &.btn-twitter a span {background-position: 0 -900px}
       &.btn-twitter a:hover span {background-position: 0 -948px}
       a {
-        @include menu-anchors; 
+        @include menu-anchors;
       }
     }
   }
@@ -154,10 +154,10 @@ position: absolute; top: 50px; left: 320px;}
 
 
 
-/* 
+/*
 ---------------------------------
 Content
---------------------------------- 
+---------------------------------
 */
 
 
@@ -171,13 +171,13 @@ h2.page-title, h3.user-title {
 
 #content {
   #inner-top {
-    padding-bottom: 20px;  
-    #videos & {
+    padding-bottom: 20px;
+    #videos.index & {
       @include inline-block;
       vertical-align: top;
     }
   }
-} 
+}
 
 
 
@@ -189,7 +189,7 @@ h2.page-title, h3.user-title {
       margin: 0 $space*2 $space*3 0;
       float: left; width: 180px;
       a {
-        width: 180px; 
+        width: 180px;
         float: left;
         &.caption {
           background: $filter-black; color: white; text-align: center; padding: 2px 0;
@@ -206,7 +206,7 @@ h2.page-title, h3.user-title {
       iframe {
         vertical-align: top;
       }
-    }   
+    }
   }
 }
 
@@ -261,7 +261,7 @@ h2.page-title, h3.user-title {
             position: relative;
         }
 
-   
+
 
         #carousel {
             overflow: hidden;
@@ -302,13 +302,13 @@ h2.page-title, h3.user-title {
             -webkit-transform: translate3d(0,0,0);
         }
 
- 
+
 
 
 .box {
   width: 280px; background: $filter-black; padding: $space*2; float: left;
 }
- 
+
 #bios {
   .content {
     width: 100%; @include clearfix2;
@@ -336,7 +336,7 @@ h2.page-title, h3.user-title {
       & + a {float: right}
     }
   }
-} 
+}
 
 a.btn {
   @include button_black; @include inline-block;
@@ -361,12 +361,15 @@ form {
       display: block;
     }
 
+      &.remember-me label {display: inline !important; padding-left: 10px}
+
     input, select {margin: 0}
     body[id^="devise"] & input[type="email"],
     body[id^="devise"] & input[type="password"],
-    input[type="text"] {width: 270px; padding: 5px 0; font-size: 18px}
+    input[type="text"],
+    textarea {width: 270px; padding: 5px 0; font-size: 18px}
 
-  
+
 
     &.date-select {
       select {
@@ -397,7 +400,7 @@ form {
   }
   .field_with_errors {
     label.message {
-      color: red; padding-left: 10px
+      color: red;  width: auto !important
     }
     & + br {display: none}
   }
@@ -409,3 +412,5 @@ form {
 }
 
 #success-message {font-size: 24px; text-align: center; color: white; display: none}
+
+.aviso {color: $green; position: relative; top: -22px}

@@ -49,10 +49,10 @@ ul ul, ul ol, ol ol, ol ul {
   padding: 15px 0;
 }
 
-/* 
+/*
 ---------------------------------
 Header
---------------------------------- 
+---------------------------------
 */
 /* line 22, ../../app/assets/stylesheets/partials/_layout.scss */
 .container {
@@ -406,10 +406,10 @@ header form#new_contacto .actions input {
   color: #8add00;
 }
 
-/* 
+/*
 ---------------------------------
 Content
---------------------------------- 
+---------------------------------
 */
 /* line 164, ../../app/assets/stylesheets/partials/_layout.scss */
 h2.page-title, h3.user-title {
@@ -430,7 +430,7 @@ h2.page-title, h3.user-title {
   padding-bottom: 20px;
 }
 /* line 175, ../../app/assets/stylesheets/partials/_layout.scss */
-#videos #content #inner-top {
+#videos.index #content #inner-top {
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -1064,28 +1064,34 @@ form .field label {
   display: block;
 }
 /* line 364, ../../app/assets/stylesheets/partials/_layout.scss */
+form .field.remember-me label {
+  display: inline !important;
+  padding-left: 10px;
+}
+/* line 366, ../../app/assets/stylesheets/partials/_layout.scss */
 form .field input, form .field select {
   margin: 0;
 }
-/* line 367, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 370, ../../app/assets/stylesheets/partials/_layout.scss */
 body[id^="devise"] form .field input[type="email"], body[id^="devise"] form .field input[type="password"],
-form .field input[type="text"] {
+form .field input[type="text"],
+form .field textarea {
   width: 270px;
   padding: 5px 0;
   font-size: 18px;
 }
-/* line 372, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 375, ../../app/assets/stylesheets/partials/_layout.scss */
 form .field.date-select select {
   display: inline-block;
   *display: inline;
   *zoom: 1;
   width: 100px;
 }
-/* line 378, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 381, ../../app/assets/stylesheets/partials/_layout.scss */
 form .actions {
   padding-top: 10px;
 }
-/* line 380, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 383, ../../app/assets/stylesheets/partials/_layout.scss */
 form .actions input[type="submit"] {
   padding: 5px 10px;
   color: white;
@@ -1107,34 +1113,34 @@ form .actions input[type="submit"] {
 form .actions input[type="submit"]:hover {
   border: 0;
 }
-/* line 385, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 388, ../../app/assets/stylesheets/partials/_layout.scss */
 form a {
   color: #8add00;
 }
-/* line 387, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 390, ../../app/assets/stylesheets/partials/_layout.scss */
 form a:hover {
   color: #8add00;
   text-decoration: underline;
 }
-/* line 390, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 393, ../../app/assets/stylesheets/partials/_layout.scss */
 form a:visited {
   color: #8add00;
 }
-/* line 395, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 398, ../../app/assets/stylesheets/partials/_layout.scss */
 form #error_explanation {
   color: red;
 }
-/* line 399, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 402, ../../app/assets/stylesheets/partials/_layout.scss */
 form .field_with_errors label.message {
   color: red;
-  padding-left: 10px;
+  width: auto !important;
 }
-/* line 402, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 405, ../../app/assets/stylesheets/partials/_layout.scss */
 form .field_with_errors + br {
   display: none;
 }
 
-/* line 406, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 409, ../../app/assets/stylesheets/partials/_layout.scss */
 #cerrar-form {
   position: absolute;
   top: 15px;
@@ -1144,10 +1150,17 @@ form .field_with_errors + br {
   background: white;
 }
 
-/* line 411, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 414, ../../app/assets/stylesheets/partials/_layout.scss */
 #success-message {
   font-size: 24px;
   text-align: center;
   color: white;
   display: none;
+}
+
+/* line 416, ../../app/assets/stylesheets/partials/_layout.scss */
+.aviso {
+  color: #8add00;
+  position: relative;
+  top: -22px;
 }

@@ -1,18 +1,19 @@
 #content
   %h2.page-title
-    Tu cuenta 
+    Tu cuenta
 
   .content
     = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-      %legend Ingresa a tu cuenta
-      .field 
+      %legend Acceso Clientes
+      .aviso Después de contratar tu sesión de fotos, podrás descargarlas desde aquí
+      .field
         = f.label :email
         = f.email_field :email
       .field
         = f.label :password
         = f.password_field :password
       - if devise_mapping.rememberable?
-        .field
+        .field.remember-me
           = f.check_box :remember_me
           = f.label :remember_me
       .actions= f.submit "Sign in"

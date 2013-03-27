@@ -7,16 +7,16 @@
           %li= msg
 
   .field
-    = f.label :nombre
+    = f.label :nombre, I18n.t('album.nombre')
     = f.text_field :nombre, :placeholder => I18n.t('album.placeholder.nombre')
   .field.date-select
-    = f.label :fecha
+    = f.label :fecha, I18n.t('album.fecha')
     = f.date_select :fecha
 
 
 
   .field
-    = f.label :cliente_id 
-    = f.collection_select :cliente_id, Cliente.all, :id, :nombre, {:include_blank => 'None'}
+    = f.label :cliente_id, I18n.t('album.cliente_id')
+    = f.collection_select :cliente_id, Cliente.all, :id, :nombre, {:include_blank => I18n.t('none')}
   .actions
     = f.submit I18n.t('save')

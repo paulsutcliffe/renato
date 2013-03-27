@@ -1,3 +1,8 @@
-= page_title! I18n.t('foto.new') + ' dentro del álbum '+ @foto.album.nombre
-= render 'form'
-  
+#content
+  %h2.page-title
+    = page_title! I18n.t('foto.new') + ' dentro del álbum '+ @foto.album.nombre
+  #inner-top
+    = link_to I18n.t('album.crud_back'), album_path(@album), :class => 'btn back'
+  .content
+    = render 'form'
+

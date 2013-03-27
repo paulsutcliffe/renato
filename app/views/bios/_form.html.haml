@@ -7,11 +7,11 @@
           %li= msg
 
   .field
-    = f.label :biografia
+    = f.label :biografia, I18n.t('bio.biografia')
     = f.text_area :biografia
 
   .field
-    = f.label :bio_picture
+    = f.label :bio_picture, I18n.t('search_picture')
     = f.file_field :bio_picture
   .actions
     = f.submit I18n.t('save')

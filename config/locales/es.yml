@@ -1,22 +1,31 @@
 es:
   cancel: Cancelar
-  save: Guardar 
+  save: Guardar
   send: Enviar
   edit: Editar
   destroy: Eliminar
+  none: Ninguno
+  search_picture: Buscar Imagen
 
   albumes:
-    index: Albumes
+    index: Álbumes
   album:
     back: Volver a los Álbumes
     new: Crear Álbum
+    crud_back: Volver al Álbum
     edit: Editar Álbum
+    nombre: Nombre
+    fecha: Fecha
+    cliente_id: Asignar Cliente al Álbum
     placeholder:
       nombre: 'Ej: Pedro Flores'
 
   bios:
     index: Biografía
-  bio:   
+    url: biografia
+  bio:
+    back: Cancelar edición de la Biografía
+    biografia: Biografía
     new: Crear Biografía
     edit: Editar Biografía
 
@@ -33,12 +42,17 @@ es:
   foto:
     new: Subir Foto
     edit: Editar Foto
+    titulo: Título
+    foto_picture: Buscar Imagen
+    publico: Público
+    categoria_id: Categoría
 
   videos:
     index: Videos
   video:
     edit: Editar Video
     new: Adjuntar Video
+    back: Cancelar
 
   will_paginate:
     previous_label: "&#8592; Anterior"

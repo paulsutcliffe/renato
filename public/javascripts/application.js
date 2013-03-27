@@ -2,19 +2,19 @@ jQuery(function($) {
 
     $('#new_contacto')
       .on('ajax:success', function(event, xhr, status, error){
-        $(this).find('.field input, textarea').val(''); 
+        $(this).find('.field input, textarea').val('');
         $('#success-message').fadeIn('slow');
       })
 
-     
+
 });
 
 
 $(document).ready(function(){
-  //  Initialize Backgound Stretcher	   
-	
+  //  Initialize Backgound Stretcher
 
- 
+
+
   // MENÚ
   $menu = $('#main-menu');
 
@@ -25,7 +25,7 @@ $(document).ready(function(){
     $menu.toggleClass('menu-open');
     event.stopPropagation();
   });
-  $('body').keyup(function(e) { 
+  $('body').keyup(function(e) {
     if (e.keyCode == 27) {
       $menu.removeClass('menu-open');
     }
@@ -36,19 +36,18 @@ $(document).ready(function(){
   });
 
 
-  
+
 
 
   show_contact_form();
 
 
-		
+
 });
 
-/*
 $(window).on('load resize orientationchange', function() {
-  $('header.main .inner').height($(document).height());
-}); */
+  $('.container').height($(document).height());
+});
 
 function show_contact_form() {
   form = $('header form');
@@ -82,4 +81,4 @@ function show_contact_form() {
 
 
 
-  
+

@@ -1,6 +1,7 @@
-= page_title! I18n.t('foto.edit') + ' del álbum ' + @foto.album.nombre
-= render 'form'
-
-= link_to 'Show', @foto
-\|
-= link_to 'Back', fotos_path
+#content
+  %h2.page-title
+    = page_title! I18n.t('foto.edit') + ' del álbum ' + @foto.album.nombre
+  #inner-top
+    = link_to I18n.t('album.crud_back'), album_path(@album), :class => 'btn back'
+  .content
+    = render 'form'

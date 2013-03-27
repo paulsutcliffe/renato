@@ -4,19 +4,17 @@
   %li#btn-portafolio
     = link_to_unless_controller('Portafolio', albumes_path, 'albumes')
     %ul
-      %li.portafolio-submenu 
+      %li.portafolio-submenu
         = link_to_unless_content_type('Matrimonio', fotos_path(:categoria_id => 'Matrimonio'), params[:categoria_id], 'Matrimonio')
-      %li.portafolio-submenu 
+      %li.portafolio-submenu
         = link_to_unless_content_type('Niños', fotos_path(:categoria_id => 'Niños'), params[:categoria_id], 'Niños')
-      %li.portafolio-submenu 
+      %li.portafolio-submenu
         = link_to_unless_content_type('Moda', fotos_path(:categoria_id => 'Moda'), params[:categoria_id], 'Moda')
 
   %li#btn-bio
     = link_to_unless_controller('Bio', bios_path, 'bios')
-  %li#btn-descarga
-    = link_to_unless_controller('Descarga tus fotos', root_path, 'download')
-
   %li#btn-videos
     = link_to_unless_controller('Videos', videos_path, 'videos')
-
+  %li#btn-descarga
+    = link_to_unless_controller('Acceso Clientes', new_cliente_session_path, 'download')
 

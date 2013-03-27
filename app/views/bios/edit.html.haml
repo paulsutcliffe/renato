@@ -1,6 +1,7 @@
-= page_title! I18n.t('bio.edit')
-= render 'form'
-
-= link_to 'Show', @bio
-\|
-= link_to 'Back', bios_path
+#content
+  %h2.page-title
+    = page_title! I18n.t('bio.edit')
+  #inner-top
+    = link_to I18n.t('bio.back'), bios_path, :class => 'btn back'
+  .content
+    = render 'form'

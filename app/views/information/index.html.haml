@@ -1,26 +1,17 @@
-%h1 Listing information
+#content
+  %h2.page-title
+    = page_title! I18n.t('information.index')
 
-%table
-  %tr
-    %th Biografia
-    %th Telefono
-    %th Email
-    %th Facebook
-    %th Twitter
-    %th
-    %th
-    %th
-
+.content
   - @information.each do |information|
-    %tr
-      %td= information.biografia
-      %td= information.telefono
-      %td= information.email
-      %td= information.facebook
-      %td= information.twitter
-      %td= link_to 'Show', information
-      %td= link_to 'Edit', edit_information_path(information)
-      %td= link_to 'Destroy', information, :confirm => 'Are you sure?', :method => :delete
+
+    = information.telefono
+    = information.email
+    = information.facebook
+    = information.twitter
+    = link_to 'Show', information
+    = link_to 'Edit', edit_information_path(information)
+    = link_to 'Destroy', information, :confirm => 'Are you sure?', :method => :delete
 
 %br
 

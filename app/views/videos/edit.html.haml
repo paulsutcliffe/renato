@@ -1,6 +1,9 @@
-= page_title! I18n.t('video.edit')
-= render 'form'
+#content
+  %h2.page-title
+    = page_title! I18n.t('video.edit')
+  #inner-top
+    = link_to I18n.t('video.back'), videos_path, :class => 'btn back'
+  .content
+    = render 'form'
 
-= link_to 'Show', @video
-\|
-= link_to 'Back', videos_path
+
