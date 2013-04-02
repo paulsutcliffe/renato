@@ -1,5 +1,10 @@
-%h1 New fondo_seccion
+#content
+  %h2.page-title
+    = page_title! I18n.t('fondo.new')
+  #inner-top
+    = link_to I18n.t('cancel'), fondo_secciones_path, :class => 'btn back'
+  .content
+    = render 'form'
 
-= render 'form'
 
-= link_to 'Back', fondo_secciones_path
+

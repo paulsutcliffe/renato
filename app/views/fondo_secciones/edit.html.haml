@@ -1,7 +1,9 @@
-%h1 Editing fondo_seccion
+#content
+  %h2.page-title
+    = page_title! I18n.t('fondo.edit') + ' ' + @fondo_seccion.title
+  #inner-top
+    = link_to I18n.t('cancel'), fondo_seccion_path(@fondo_seccion), :class => 'btn back'
+  .content
+    = render 'form'
 
-= render 'form'
 
-= link_to 'Show', @fondo_seccion
-\|
-= link_to 'Back', fondo_secciones_path

@@ -1,8 +1,20 @@
-= link_to 'Subir Fondo', new_fondo_seccion_background_path(@fondo_seccion)
+#content
+  %h2.page-title
+    = page_title! I18n.t('fondos.index')
+
+  - if current_admin
+    .admin-crud.admin-head
+      = link_to 'Subir Fondo', new_fondo_seccion_background_path(@fondo_seccion)
+
+  %ul.content
+
 
 %div
   - @backgrounds.each do |background|
     = image_tag background.background_picture(:index)
+    %div
+      = link_to 'editar', edit_fondo_seccion_background_path(background.fondo_seccion, background)
+      = link_to I18n.t('destroy'), fondo_seccion_background_path(background.fondo_seccion, background), :confirm => 'sure', :method => :delete, :class => 'btn'
 
 %p#notice= notice
 

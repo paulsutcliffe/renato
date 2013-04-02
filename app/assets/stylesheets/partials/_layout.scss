@@ -336,6 +336,13 @@ h2.page-title, h3.user-title {
       & + a {float: right}
     }
   }
+
+  .page-name &.admin-iterate {
+    background: none; width: auto; float: right; text-align: right;
+    a {
+      float: none; 
+    }
+  }
 }
 
 a.btn {
@@ -414,3 +421,18 @@ form {
 #success-message {font-size: 24px; text-align: center; color: white; display: none}
 
 .aviso {color: $green; position: relative; top: -22px}
+
+table {background-image: $filter-black; color: white; padding: 10px}
+.fondos-list {
+  padding-top: 15px;
+  li {padding-bottom: 15px}
+  .picture-holder {
+    @include inline-block; width: 93px;
+  }
+
+}
+.page-name {
+  a {color: white;}
+  background: $filter-black; padding: 5px
+}
+

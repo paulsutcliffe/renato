@@ -1,31 +1,12 @@
-= page_title! I18n.t('fotos.index')
-
-
-- @fotos.each do |foto|
-  = image_tag foto.foto_picture(:index)
-
-
--#
-  %table
-    %tr
-      %th Titulo
-      %th Publico
-      %th Album
-      %th Categoria
-      %th
-      %th
-      %th
+#content
+  %h2.page-title
+    = page_title! I18n.t('fotos.matrimonios')
   
+  .admin-crud.admin-head
+    = link_to I18n.t('foto.new'), new_foto_path, :class => 'btn create'
+
+  .content.gallery
     - @fotos.each do |foto|
-      %tr
-        %td= foto.titulo
-        %td= foto.publico
-        %td= foto.album_id
-        %td= foto.categoria_id
-        %td= link_to 'Show', foto
-        %td= link_to 'Edit', edit_foto_path(foto)
-        %td= link_to 'Destroy', foto, :confirm => 'Are you sure?', :method => :delete
-  
-  %br
-  
-  = link_to 'New Foto', new_foto_path
+      = image_tag foto.foto_picture(:index)
+
+- wallpaper('Fotos')

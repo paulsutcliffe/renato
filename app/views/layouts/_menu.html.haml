@@ -17,4 +17,8 @@
     = link_to_unless_controller('Videos', videos_path, 'videos')
   %li#btn-descarga
     = link_to_unless_controller('Acceso Clientes', new_cliente_session_path, 'download')
-
+  - if current_admin
+    %li
+      = link_to_unless_controller('Fondos', fondo_secciones_path, 'fondo_secciones')
+    %li
+      = link_to_unless_controller('Admin cerrar sesión', destroy_admin_session_path, 'nil')

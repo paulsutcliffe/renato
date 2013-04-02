@@ -6,16 +6,22 @@ class AlbumesController < InheritedResources::Base
     else
       @albumes = Album.paginate(:page => params[:page], :per_page => 9)
     end
+
   end
  
 
   def show
     @album = Album.find(params[:id])
     @fotos = @album.fotos.paginate(:page => params[:page], :per_page => 9)
+
   end
 
   def create
     create!{ new_album_foto_path(@album, @foto) }
   end
+
+
+
+
 
 end

@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+ #helper_method :wallpaper 
   #before_filter :authenticate_admin!, :except => [:index, :show]
 
   def bodyid
@@ -24,14 +25,10 @@ class ApplicationController < ActionController::Base
     @bodyclass = @action + ' ' + @front + ' ' + @admin
   end
 
-  def backgrounds
-    @fondo_seccion = FondoSeccion.find(params[:id])
-    @backgrounds = @fondo_seccion.backgrounds.all
-  end
-
-  helper_method :backgrounds
   helper_method :bodyid
   helper_method :bodyclass
+
+
 
   # controller_name
   # action_name

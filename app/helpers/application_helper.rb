@@ -67,4 +67,12 @@ module ApplicationHelper
     link_to title, params.merge(:sort => column, :direction => direction, :page => nil), {:class => css_class}
   end
 
+
+
+  # load wallpaper
+  def wallpaper(page_name)
+    if !@backgrounds.nil?
+      @backgrounds = FondoSeccion.find_by_title("#{page_name}").backgrounds.all
+    end
+  end
 end

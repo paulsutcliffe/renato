@@ -6,6 +6,7 @@ es:
   destroy: Eliminar
   none: Ninguno
   search_picture: Buscar Imagen
+  back: Volver
 
   albumes:
     index: Álbumes
@@ -19,6 +20,11 @@ es:
     cliente_id: Asignar Cliente al Álbum
     placeholder:
       nombre: 'Ej: Pedro Flores'
+
+  backgrounds:
+    index: Wallpapers
+  background:
+    new: Subir Wallpaper
 
   bios:
     index: Biografía
@@ -39,6 +45,9 @@ es:
 
   fotos:
     index: Fotos
+    matrimonios: Matrimonios
+    niños: Niños
+    moda: Moda
   foto:
     new: Subir Foto
     edit: Editar Foto
@@ -47,12 +56,21 @@ es:
     publico: Público
     categoria_id: Categoría
 
+  fondos:
+    index: Wallpapers de Páginas Internas
+  fondo:
+    new: Agregar Nueva Página Interna
+    edit: Editar Página Interna
+
   videos:
     index: Videos
   video:
     edit: Editar Video
     new: Adjuntar Video
     back: Cancelar
+
+  wallpaper:
+    new: Subir Wallpaper
 
   will_paginate:
     previous_label: "&#8592; Anterior"

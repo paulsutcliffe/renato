@@ -1,21 +1,28 @@
-%h1 Listing fondo_secciones
+#content
+  %h2.page-title
+    = page_title! I18n.t('fondos.index')
 
-%table
-  %tr
-    %th Title
-    %th Slug
-    %th
-    %th
-    %th
+  - if current_admin
+    .admin-crud.admin-head
+      = link_to I18n.t('fondo.new'), new_fondo_seccion_path, :class => 'btn create'
 
-  - @fondo_secciones.each do |fondo_seccion|
-    %tr
-      %td= fondo_seccion.title
-      %td= fondo_seccion.slug
-      %td= link_to 'Show', fondo_seccion
-      %td= link_to 'Edit', edit_fondo_seccion_path(fondo_seccion)
-      %td= link_to 'Destroy', fondo_seccion, :confirm => 'Are you sure?', :method => :delete
+  %ul.content.fondos-list
+    - @fondo_secciones.each do |fondo_seccion|
+      %li
+        .page-name
+          = link_to fondo_seccion.title, fondo_seccion_path(fondo_seccion)
+          
+          .admin-crud.admin-iterate
+            = link_to I18n.t('wallpaper.new'), new_fondo_seccion_background_path(fondo_seccion)
+            - if current_admin
+              = link_to I18n.t('edit'), edit_fondo_seccion_path(fondo_seccion)
+              = link_to I18n.t('destroy'), fondo_seccion, :confirm => 'Are you sure?', :method => :delete
+        -# unless fondo_seccion.backgrounds.empty?
+          = link_to image_tag(fondo_seccion.backgrounds.first.background_picture(:index)), fondo_seccion_path(fondo_seccion)
+        - fondo_seccion.backgrounds.each do |bg|
+          .picture-holder
+            = image_tag bg.background_picture(:index)
+            .admin-crud.admin-iterate
+              = link_to I18n.t('edit'), edit_fondo_seccion_background_path(bg.fondo_seccion, bg)
+              = link_to I18n.t('destroy'), fondo_seccion_background_path(bg.fondo_seccion, bg)
 
-%br
-
-= link_to 'New Fondo seccion', new_fondo_seccion_path

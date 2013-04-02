@@ -1014,8 +1014,19 @@ h2.page-title, h3.user-title {
 .admin-crud.admin-iterate a + a {
   float: right;
 }
+/* line 340, ../../app/assets/stylesheets/partials/_layout.scss */
+.page-name .admin-crud.admin-iterate {
+  background: none;
+  width: auto;
+  float: right;
+  text-align: right;
+}
+/* line 342, ../../app/assets/stylesheets/partials/_layout.scss */
+.page-name .admin-crud.admin-iterate a {
+  float: none;
+}
 
-/* line 341, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 348, ../../app/assets/stylesheets/partials/_layout.scss */
 a.btn {
   background: url(../images/backgrounds/filter-black.png);
   padding: 5px 10px;
@@ -1028,7 +1039,7 @@ a.btn {
   *zoom: 1;
 }
 
-/* line 349, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 356, ../../app/assets/stylesheets/partials/_layout.scss */
 form {
   padding: 20px 15px;
   background: url(../images/backgrounds/filter-black.png);
@@ -1047,32 +1058,32 @@ form:after {
   line-height: 0;
   height: 0;
 }
-/* line 356, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 363, ../../app/assets/stylesheets/partials/_layout.scss */
 form legend {
   color: white;
   font-size: 24px;
   padding-bottom: 20px;
 }
-/* line 357, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 364, ../../app/assets/stylesheets/partials/_layout.scss */
 form .field {
   padding: 0 0 15px;
 }
-/* line 359, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 366, ../../app/assets/stylesheets/partials/_layout.scss */
 form .field label {
   color: white;
   font-size: 18px;
   display: block;
 }
-/* line 364, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 371, ../../app/assets/stylesheets/partials/_layout.scss */
 form .field.remember-me label {
   display: inline !important;
   padding-left: 10px;
 }
-/* line 366, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 373, ../../app/assets/stylesheets/partials/_layout.scss */
 form .field input, form .field select {
   margin: 0;
 }
-/* line 370, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 377, ../../app/assets/stylesheets/partials/_layout.scss */
 body[id^="devise"] form .field input[type="email"], body[id^="devise"] form .field input[type="password"],
 form .field input[type="text"],
 form .field textarea {
@@ -1080,18 +1091,18 @@ form .field textarea {
   padding: 5px 0;
   font-size: 18px;
 }
-/* line 375, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 382, ../../app/assets/stylesheets/partials/_layout.scss */
 form .field.date-select select {
   display: inline-block;
   *display: inline;
   *zoom: 1;
   width: 100px;
 }
-/* line 381, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 388, ../../app/assets/stylesheets/partials/_layout.scss */
 form .actions {
   padding-top: 10px;
 }
-/* line 383, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 390, ../../app/assets/stylesheets/partials/_layout.scss */
 form .actions input[type="submit"] {
   padding: 5px 10px;
   color: white;
@@ -1113,34 +1124,34 @@ form .actions input[type="submit"] {
 form .actions input[type="submit"]:hover {
   border: 0;
 }
-/* line 388, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 395, ../../app/assets/stylesheets/partials/_layout.scss */
 form a {
   color: #8add00;
 }
-/* line 390, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 397, ../../app/assets/stylesheets/partials/_layout.scss */
 form a:hover {
   color: #8add00;
   text-decoration: underline;
 }
-/* line 393, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 400, ../../app/assets/stylesheets/partials/_layout.scss */
 form a:visited {
   color: #8add00;
 }
-/* line 398, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 405, ../../app/assets/stylesheets/partials/_layout.scss */
 form #error_explanation {
   color: red;
 }
-/* line 402, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 409, ../../app/assets/stylesheets/partials/_layout.scss */
 form .field_with_errors label.message {
   color: red;
   width: auto !important;
 }
-/* line 405, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 412, ../../app/assets/stylesheets/partials/_layout.scss */
 form .field_with_errors + br {
   display: none;
 }
 
-/* line 409, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 416, ../../app/assets/stylesheets/partials/_layout.scss */
 #cerrar-form {
   position: absolute;
   top: 15px;
@@ -1150,7 +1161,7 @@ form .field_with_errors + br {
   background: white;
 }
 
-/* line 414, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 421, ../../app/assets/stylesheets/partials/_layout.scss */
 #success-message {
   font-size: 24px;
   text-align: center;
@@ -1158,9 +1169,42 @@ form .field_with_errors + br {
   display: none;
 }
 
-/* line 416, ../../app/assets/stylesheets/partials/_layout.scss */
+/* line 423, ../../app/assets/stylesheets/partials/_layout.scss */
 .aviso {
   color: #8add00;
   position: relative;
   top: -22px;
+}
+
+/* line 425, ../../app/assets/stylesheets/partials/_layout.scss */
+table {
+  background-image: url(../images/backgrounds/filter-black.png);
+  color: white;
+  padding: 10px;
+}
+
+/* line 426, ../../app/assets/stylesheets/partials/_layout.scss */
+.fondos-list {
+  padding-top: 15px;
+}
+/* line 428, ../../app/assets/stylesheets/partials/_layout.scss */
+.fondos-list li {
+  padding-bottom: 15px;
+}
+/* line 429, ../../app/assets/stylesheets/partials/_layout.scss */
+.fondos-list .picture-holder {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 93px;
+}
+
+/* line 434, ../../app/assets/stylesheets/partials/_layout.scss */
+.page-name {
+  background: url(../images/backgrounds/filter-black.png);
+  padding: 5px;
+}
+/* line 435, ../../app/assets/stylesheets/partials/_layout.scss */
+.page-name a {
+  color: white;
 }

@@ -8,6 +8,11 @@
 
 long_text = File.read(File.join(Rails.root, '/features/support/long_text.txt'))
 
+Admin.delete_all
+Admin.create(:email => 'ricardo@kosmyka.com', :password => '1234567')
+Admin.create(:email => 'paul@kosmyka.com', :password => '1234567')
+
+
 Album.delete_all
 1.upto(25) do |i|
   Album.create!(:nombre => 'Fiesta N ' + "#{i}").fotos.create!(:foto_picture => File.open(File.join(Rails.root, '/features/support/images/foto_picture.jpg')))
@@ -34,17 +39,21 @@ Cliente.create!(:nombre => 'pablo', :apellido => 'sinclaire', :email => 'pablo@t
 
 ################ START FondoSeccion has_many Backgrounds ################ 
 # 1) Create multiple FondoSeccion
- FondoSeccion.delete_all
- secciones = ['Inicio', 'Portafolio', 'Matrimonio', 'Niños', 'Moda', 'Bio', 'Descarga', 'Videos', 'Cliente'].each do |i|
-   FondoSeccion.create!(:title => i)
- end
+FondoSeccion.delete_all
+secciones = ['Inicio', 'Portafolio', 'Matrimonio', 'Niños', 'Moda', 'Bio', 'Videos', 'IniciarSesión', 'devise-passwords'].each do |i|
+  FondoSeccion.create!(:title => i)
+end
 
 # 2) Find by the title and then add a background six times
-1.upto(6) do |i|
-  secciones.each do |b|
-    FondoSeccion.find_by_title(b).backgrounds.create!(:background_picture => File.open(File.join(Rails.root, '/features/support/backgrounds/sample-' + "#{i}" +'.jpg'))) 
-  end
-end
+#1.upto(6) do |i|
+#  secciones.each do |b|
+#    FondoSeccion.find_by_title(b).backgrounds.create!(:background_picture => File.open(File.join(Rails.root, '/features/support/backgrounds/sample-' + "#{i}" +'.jpg'))) 
+#  end
+#end
+
+Fondo.find_by_name('Inicio').backgrounds(:background_picture => File.open(File.join(Rails.root, '/public/images/images/fondos/fondo-index.jpg')))
+
+
 ################ END FondoSeccion has_many Backgrounds ################ 
 
 Information.delete_all
