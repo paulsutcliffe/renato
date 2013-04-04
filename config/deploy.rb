@@ -1,7 +1,7 @@
 require "bundler/capistrano"
 
 set :user, "renatogh"
-set :domain, "174.121.8.3"
+set :domain, "renatoghilardi.com"
 set :project, "renato"
 set :application, "renato"
 set :applicationdir, "/home/#{user}/rails_apps/#{application}"  # The standard Dreamhost setup
