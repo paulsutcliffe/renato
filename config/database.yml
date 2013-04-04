@@ -8,11 +8,11 @@ defaults: &defaults
   socket: /tmp/mysql.sock
 
 development:
-  database: renato_development
+  database: renatogh_development
   <<: *defaults
 
 test: &test
-  database: renato_test
+  database: renatogh_test
   <<: *defaults
 
 production:
@@ -20,9 +20,9 @@ production:
   encoding: utf8
   reconnect: false
   host: localhost
-  database: renato_production
+  database: renatogh_production
   pool: 5
-  username: renato_db
+  username: renatogh_db
   password: chimpance99
 
 cucumber:
