@@ -35,7 +35,7 @@ gem "jquery-rails"
 gem "metamagic"
 gem "friendly_id", "~>4.0.0.beta14"
 gem "devise"
-#gem "auto_html"
+gem "auto_html"
 gem "page_title_helper"
 gem 'rdoc'
 #gem "rake", "~>0.9.2"
