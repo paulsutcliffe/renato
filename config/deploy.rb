@@ -1,5 +1,7 @@
 require "bundler/capistrano"
 
+ssh_options[:port] = 2222
+
 set :user, "renatogh"
 set :domain, "renatoghilardi.com"
 set :project, "renato"
