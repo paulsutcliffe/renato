@@ -1,4 +1,4 @@
-require "bundler/capistrano"
+#require "bundler/capistrano"
 
 ssh_options[:port] = 2222
 
@@ -10,7 +10,7 @@ set :applicationdir, "/home/#{user}/rails_apps/#{application}"  # The standard D
 set :repository,  "git@github.com:paulsutcliffe/renato.git"
 default_run_options[:pty] = true
 
-default_environment['GEM_PATH'] = File.expand_path('~/.gems') + ':' + '/usr/lib/ruby/gems/1.8'
+#default_environment['GEM_PATH'] = File.expand_path('~/.gems') + ':' + '/usr/lib/ruby/gems/1.8'
 
 ssh_options[:forward_agent] = true
 set :git_enable_submodules, 1
