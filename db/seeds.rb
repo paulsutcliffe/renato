@@ -40,7 +40,7 @@ Cliente.create!(:nombre => 'pablo', :apellido => 'sinclaire', :email => 'pablo@t
 ################ START FondoSeccion has_many Backgrounds ################ 
 # 1) Create multiple FondoSeccion
 FondoSeccion.delete_all
-secciones = ['Inicio', 'Portafolio', 'Matrimonio', 'Niños', 'Moda', 'Bio', 'Videos', 'IniciarSesión', 'devise-passwords'].each do |i|
+secciones = ['Inicio', 'Portafolio', 'Portafolio Interna', 'Matrimonio', 'Niños', 'Moda', 'Bio', 'Videos', 'IniciarSesión', 'devise-passwords'].each do |i|
   FondoSeccion.create!(:title => i)
 end
 
@@ -51,7 +51,7 @@ end
 #  end
 #end
 
-Fondo.find_by_name('Inicio').backgrounds(:background_picture => File.open(File.join(Rails.root, '/public/images/images/fondos/fondo-index.jpg')))
+#Fondo.find_by_name('Inicio').backgrounds(:background_picture => File.open(File.join(Rails.root, '/public/images/images/fondos/fondo-index.jpg')))
 
 
 ################ END FondoSeccion has_many Backgrounds ################ 

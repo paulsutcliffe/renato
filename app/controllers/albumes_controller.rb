@@ -20,8 +20,4 @@ class AlbumesController < InheritedResources::Base
     create!{ new_album_foto_path(@album, @foto) }
   end
 
-
-
-
-
 end

@@ -14,7 +14,7 @@ Renato::Application.routes.draw do
   resources :categorias do
     resources :fotos
   end
-  resources :albumes do
+  resources :albumes, :path => I18n.t('albumes.url') do
     resources :fotos
   end
   resources :fondo_secciones do

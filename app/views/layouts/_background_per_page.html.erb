@@ -1,29 +1,31 @@
 
+
+
+
 <script>
 jQuery(function($){
 
   $.supersized({
 				
   // Functionality
-    slide_interval          :   8000,		// Length between transitions
-    transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+    slide_interval          :   8000, // Length between transitions
+    transition              :   1, // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
     transition_speed		:	4000,		// Speed of transition
 															   
-					// Components							
-    slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
-  slides:  	[	
+    slide_links	:	'blank',
+  slides: [	
 
-<% if !@backgrounds.nil? || defined?(@backgrounds) %>
-  <% @backgrounds.each do |background| %>
-    <%= "{image:'" + background.background_picture(:full_size).to_s + "'}," %>
-  <% end %> 
-
+<% if !@backgrounds.nil?  %>
+    <% @backgrounds.each do |background| %>
+       <%= "{image:'" + background.background_picture(:full_size).to_s + "'}," %>
+    <% end %> 
 <% else %>
-  {image : '/images/fondos/fondo-index.jpg'}
+{image : '/javascripts/libs/bgstretcher-2/demo/images/sample-2.jpg', title : 'Image Credit: Maria Kazvan', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/kazvan-1.jpg', url : 'http://www.nonsensesociety.com/2011/04/maria-kazvan/'},
+{image : '/javascripts/libs/bgstretcher-2/demo/images/sample-1.jpg', title : 'Image Credit: Maria Kazvan', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/kazvan-1.jpg', url : 'http://www.nonsensesociety.com/2011/04/maria-kazvan/'},
 <% end %>
 
 /*	{image : '/javascripts/libs/bgstretcher-2/demo/images/sample-1.jpg', title : 'Image Credit: Maria Kazvan', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/kazvan-1.jpg', url : 'http://www.nonsensesociety.com/2011/04/maria-kazvan/'},
-{image : '/javascripts/libs/bgstretcher-2/demo/images/sample-2.jpg', title : 'Image Credit: Maria Kazvan', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/kazvan-1.jpg', url : 'http://www.nonsensesociety.com/2011/04/maria-kazvan/'},																			*/						]
+{image : '/javascripts/libs/bgstretcher-2/demo/images/sample-2.jpg', title : 'Image Credit: Maria Kazvan', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/kazvan-1.jpg', url : 'http://www.nonsensesociety.com/2011/04/maria-kazvan/'},	*/																								]
 
 					
 				});

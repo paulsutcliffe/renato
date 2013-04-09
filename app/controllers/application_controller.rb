@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
- #helper_method :wallpaper 
   #before_filter :authenticate_admin!, :except => [:index, :show]
 
   def bodyid

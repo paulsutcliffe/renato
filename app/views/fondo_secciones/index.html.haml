@@ -24,5 +24,5 @@
             = image_tag bg.background_picture(:index)
             .admin-crud.admin-iterate
               = link_to I18n.t('edit'), edit_fondo_seccion_background_path(bg.fondo_seccion, bg)
-              = link_to I18n.t('destroy'), fondo_seccion_background_path(bg.fondo_seccion, bg)
+              = link_to I18n.t('destroy'), fondo_seccion_background_path(bg.fondo_seccion, bg), :confirm => I18n.t('background.destroy'), :method => :delete
 

@@ -1,15 +1,12 @@
 class FotosController < InheritedResources::Base
   #belongs_to :album, :finder => :find_by_slug!
-  #before_filter :find_album, :except => ['index']
+  before_filter :find_album, :except => ['index']
 
   def index
     @fotos = Foto.tipo_de_foto(params[:categoria_id])
   end
 
   def new
-    if !@album.nil?
-      @album ||= Album.find(params[:album_id])
-    end
     @foto = Foto.new
   end
 

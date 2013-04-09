@@ -1,12 +1,15 @@
+// carga los wallpapers y el @foto_title que es la categoría de la foto
+- wallpaper_foto
+
 #content
   %h2.page-title
-    = page_title! I18n.t('fotos.matrimonios')
+    = page_title! @foto_title
   
   .admin-crud.admin-head
-    = link_to I18n.t('foto.new'), new_foto_path, :class => 'btn create'
+    =# link_to I18n.t('foto.new'), new_foto_path, :class => 'btn create'
 
   .content.gallery
     - @fotos.each do |foto|
       = image_tag foto.foto_picture(:index)
 
-- wallpaper('Fotos')
+

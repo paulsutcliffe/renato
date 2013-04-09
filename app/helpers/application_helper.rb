@@ -71,8 +71,26 @@ module ApplicationHelper
 
   # load wallpaper
   def wallpaper(page_name)
-    if !@backgrounds.nil?
-      @backgrounds = FondoSeccion.find_by_title("#{page_name}").backgrounds.all
+    @fondo = FondoSeccion.find_by_title("#{page_name}")
+    @backgrounds = @fondo.backgrounds.all
+  end
+
+
+  def wallpaper_foto
+    if @fotos.find(:all, :conditions => ["categoria_id = ?", "Matrimonio"]).size > 0
+      wallpaper('Matrimonio')
+      @foto_title = "Matrimonio"
+    end
+
+    if @fotos.find(:all, :conditions => ["categoria_id = ?", "Niños"]).size > 0
+      wallpaper('Niños')
+      @foto_title = 'Niños'
+    end  
+
+    if @fotos.find(:all, :conditions => ["categoria_id = ?", "Moda"]).size > 0
+      wallpaper('Moda')
+      @foto_title = 'Moda'
     end
   end
+
 end

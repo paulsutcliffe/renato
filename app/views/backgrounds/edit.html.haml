@@ -1,4 +1,12 @@
-%h1 Editing background
-
-= render 'form'
+#content
+  %h2.page-title
+    = page_title! I18n.t('background.edit')
+  #inner-top
+    = link_to I18n.t('cancel'), fondo_secciones_path, :class => 'btn back'
+  .content
+    %p.imagen-actual
+      Imagen actual
+      %br
+      = image_tag @background.background_picture(:index)
+    = render 'form'
 

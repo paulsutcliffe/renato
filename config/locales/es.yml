@@ -9,7 +9,8 @@ es:
   back: Volver
 
   albumes:
-    index: Álbumes
+    index: Portafolio
+    url: portafolio
   album:
     back: Volver a los Álbumes
     new: Crear Álbum
@@ -25,6 +26,8 @@ es:
     index: Wallpapers
   background:
     new: Subir Wallpaper
+    edit: Editar Wallpaper
+    destroy: ¿Seguro de querer eliminar el wallpaper?
 
   bios:
     index: Biografía
