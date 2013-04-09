@@ -13,22 +13,6 @@ gem "mysql2", "~> 0.2.7"
 # Deploy with Capistrano
 gem "capistrano"
 
-# To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
-# gem 'ruby-debug'
-# gem 'ruby-debug19'
-
-# Bundle the extra gems:
-# gem 'bj'
-# gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
-# gem 'aws-s3', :require => 'aws/s3'
-
-# Bundle gems for the local environment. Make sure to
-# put test-only gems in this group so their generators
-# and rake tasks are available in development mode:
-# group :development, :test do
-#   gem 'webrat'
-# end
 group :development do
   gem 'barista'
   gem 'yui-compressor', :require => 'yui/compressor'
@@ -54,39 +38,7 @@ gem "devise"
 gem "auto_html"
 gem "page_title_helper"
 gem 'rdoc'
-gem "rake", "~>0.9.2"
-
-group :test do
-  gem "cucumber-rails"
-  gem "database_cleaner"
-end
-
-gem 'rspec-rails', :group => [:development, :test]
-
-group :development do
-  gem 'barista'
-  gem 'yui-compressor', :require => 'yui/compressor'
-  gem 'sass'
-  gem 'json' # sprocket dependency for Ruby 1.8 only
-  gem 'sprockets', :git => 'git://github.com/sstephenson/sprockets.git'
-  gem 'compass', '>= 0.13.alpha.0'
-  gem 'compass-rails', '>= 1.0.2'
-  gem 'susy'
-end
-
-gem "haml"
-gem "haml-rails"
-gem "paperclip", "~>2.0"
-gem "will_paginate"
-gem "inherited_resources"
-gem "jquery-rails"
-gem "metamagic"
-gem "friendly_id", "~>4.0.0.beta14"
-gem "devise"
-gem "auto_html"
-gem "page_title_helper"
-gem 'rdoc'
-gem "rake", "~>0.9.2"
+#gem "rake", "~>0.9.2"
 
 group :test do
   gem "cucumber-rails"
